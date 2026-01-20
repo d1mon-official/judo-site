@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judo Center</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+    <div class="container header-container">
+        <a href="#home" class="logo">
+            <img src="https://i.postimg.cc/8cz2HLvT/photo_2025_12_23_11_22_05_removebg_preview.png" 
+                    alt="" class="logo-img">
+
+        <div class="header-right">
+            <div class="lang-selector">
+                <button class="lang-node active" onclick="changeLang('uk', this)">UA</button>
+                <button class="lang-node" onclick="changeLang('en', this)">EN</button>
+                <button class="lang-node" onclick="changeLang('ru', this)">RU</button>
+            </div>
+            <a href="#contact" class="btn-header-join" data-key="btn_join">Приєднатися</a>
+        </div>
+    </div>
+</header>
+
+
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="zoom-in">
+            <h1 data-key="hero_title">JUDO CENTER</h1>
+            <p class="hero-subtext">STATEN ISLAND • BROOKLYN</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-text-box" data-aos="fade-right">
+                    <h2 class="section-title" data-key="about_title" style="text-align: left;">Про наш Центр</h2>
+                    <p data-key="about_p">Центр дзюдо був заснований у 1996 році. За останні 20 років наші учні підкорили численні регіональні, національні та міжнародні арени. Багато з них стали чемпіонами США. Сьогодні у нас тренуються 150 учнів віком від 5 до 65 років. Головний тренер клубу — Фелікс Свердлін (чорний пояс, 5 дан), тренер міжнародного класу.</p>
+                </div>
+                <div class="about-img-box" data-aos="fade-left">
+                    <img src="https://res.cloudinary.com/duu3v9gfg/image/fetch/t_fit_1920/https://78884ca60822a34fb0e6-082b8fd5551e97bc65e327988b444396.ssl.cf3.rackcdn.com/up/2024/08/31_08-64-1725132582-1725132582.jpg" alt="Judo Trainer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title center-align" data-key="sched_title">Розклад занять</h2>
+            <div class="schedule-grid">
+                <div class="schedule-card" data-aos="fade-up">
+                    <div class="card-loc" data-key="loc_si">📍 Staten Island</div>
+                    <h4 class="card-group" data-key="group_kids">Діти (5-7 років)</h4>
+                    <p class="card-time" data-key="days_1">Пн • Ср • Пт</p>
+                    <div style="font-weight: 900; font-size: 1.2rem; margin-bottom: 15px;">18:00 – 19:30</div>
+                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Записатися</a>
+                </div>
+                <div class="schedule-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-loc" data-key="loc_si">📍 Staten Island</div>
+                    <h4 class="card-group" data-key="group_adults">Старша група</h4>
+                    <p class="card-time" data-key="days_1">Пн • Ср • Пт</p>
+                    <div style="font-weight: 900; font-size: 1.2rem; margin-bottom: 15px;">19:30 – 21:00</div>
+                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Записатися</a>
+                </div>
+                <div class="schedule-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-loc" data-key="loc_br">📍 Brooklyn</div>
+                    <h4 class="card-group" data-key="group_kids">Діти (5-7 років)</h4>
+                    <p class="card-time" data-key="days_week">Вт • Чт | Суб</p>
+                    <div style="font-weight: 700; font-size: 1rem; margin-bottom: 15px;">
+                        <span data-key="time_tue_thu">18:00 – 19:30 (Вт/Чт)</span><br>
+                        <span data-key="time_sat">10:30 – 12:00 (Сб)</span>
+                    </div>
+                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Записатися</a>
+                </div>
+                <div class="schedule-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-loc" data-key="loc_br">📍 Brooklyn</div>
+                    <h4 class="card-group" data-key="group_adults">Старша група</h4>
+                    <p class="card-time" data-key="days_week">Вт • Чт | Суб</p>
+                    <div style="font-weight: 700; font-size: 1rem; margin-bottom: 15px;">
+                        <span data-key="time_tue_thu_adults">19:30 – 21:00 (Вт/Чт)</span><br>
+                        <span data-key="time_sat_adults">12:00 – 13:30 (Сб)</span>
+                    </div>
+                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Записатися</a>
+                </div>
+            </div>
+
+            <div class="fitness-wide-card" data-aos="fade-up">
+                <div class="fitness-inner">
+                    <div class="fit-info">
+                        <span class="fit-tag">SPECIAL GROUP</span>
+                        <h4 data-key="group_fit">Judo + Fitness (4-6 years)</h4>
+                        <p data-key="fit_exp">Experimental group • 📍 Brooklyn</p>
+                    </div>
+                    <div class="fit-details">
+                        <div class="fit-time" data-key="days_fit">Вівторок • Четвер | 17:00 – 18:00</div>
+                        <div class="fit-limit" data-key="fit_limit">12 занять на місяць</div>
+                    </div>
+                    <a href="#contact" class="btn-gold-wide" data-key="btn_signup">Записатися</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title center-align" data-key="gallery_title">Наше життя в залі</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up"><img src="https://optim.tildacdn.net/tild6465-3335-4364-a363-613431333833/-/format/webp/43214.jpg.webp" alt="Judo"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="https://optim.tildacdn.net/tild3531-3230-4266-b130-396366336630/-/format/webp/7879.jpg.webp" alt="Judo"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="https://i.postimg.cc/ZKTQ6PSg/77-png.webp" alt="Judo"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="https://optim.tildacdn.net/tild3961-3362-4637-a365-386265353161/-/format/webp/13.jpg.webp" alt="Judo"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400"><img src="https://optim.tildacdn.net/tild3462-3737-4966-b936-353861376131/-/format/webp/photo_2023-11-20_153.jpeg.webp" alt="Judo"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500"><img src="https://i.postimg.cc/PJ5g41DH/2025_12_23_18_14_03.jpg" alt="Judo"></div>
+            </div>
+            <div class="gallery-footer" data-aos="zoom-in">
+                <p data-key="see_more">Хочете побачити більше фото та відео?</p>
+                <a href="https://www.instagram.com/judosambocenter/" target="_blank" class="btn-insta">Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title center-align" data-key="nav_contact">Контакти</h2>
+            <div class="contact-grid-new">
+                <div class="map-box" data-aos="fade-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.548483115454!2d-74.09545!3d40.5843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24f5a4a5a5a5b%3A0x5a5a5a5a5a5a5a5a!2s609%20Midland%20Ave%2C%20Staten%20Island%2C%20NY%2010306!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div class="info-side" data-aos="fade-left">
+                    <form class="nice-form" id="joinForm" action="https://formspree.io/f/xeejnnyd" method="POST">
+                        <h3 data-key="btn_join">Приєднатися</h3>
+                        <input type="text" name="name" data-key="form_name_placeholder" placeholder="Ваше ім'я" required>
+                        <input type="tel" name="phone" data-key="form_phone_placeholder" placeholder="Номер телефону" required>
+                        <select name="gym" required>
+                            <option value="" disabled selected data-key="form_select_gym">Виберіть зал</option>
+                            <option value="SI" data-key="loc_si">Staten Island</option>
+                            <option value="BR" data-key="loc_br">Brooklyn</option>
+                        </select>
+                        <button type="submit" class="btn-form" data-key="btn_signup">Надіслати</button>
+                        
+                        <div class="social-icons-row">
+                            <a href="https://instagram.com/judosambocenter" target="_blank" class="mini-icon insta"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/sambocenter" target="_blank" class="mini-icon fb"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@judocenterny" target="_blank" class="mini-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <p id="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
