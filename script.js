@@ -67,3 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === (savedLang === 'uk' ? 'ua' : savedLang.toLowerCase()));
     changeLang(savedLang, btn);
 });
+window.scrollTo({
+  top: targetElement.offsetTop,
+  behavior: 'auto' 
+});
