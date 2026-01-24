@@ -685,3 +685,6 @@ body {
     .logo-img { height: 70px; }
     .main-header { height: 80px; }
 }
+html {
+  scroll-behavior: smooth;
+}
