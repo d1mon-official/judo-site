@@ -65,7 +65,7 @@ function changeLang(lang, btnElement) {
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({ duration: 1000, once: true });
     const savedLang = localStorage.getItem('preferredLang') || 'uk';
-    const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === (savedLang === 'uk' ? 'ua' : savedLang.toLowerCase()));
+    const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === (savedLang === 'en' ? 'en' : savedLang.toLowerCase()));
     changeLang(savedLang, btn);
 });
 window.scrollTo({
