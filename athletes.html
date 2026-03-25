@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Athletes Judo Center</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<header class="main-header">
+
+<div class="container header-container">
+
+<a href="index.html" class="logo">
+<img src="https://i.postimg.cc/8cz2HLvT/photo_2025_12_23_11_22_05_removebg_preview.png" class="logo-img">
+</a>
+
+<div class="header-right">
+
+<div class="lang-selector">
+<button class="lang-node" onclick="changeLang('uk', this)">UA</button>
+<button class="lang-node active" onclick="changeLang('en', this)">EN</button>
+<button class="lang-node" onclick="changeLang('ru', this)">RU</button>
+</div>
+
+<a href="index.html#contact" class="btn-header-join" data-key="btn_join">Join Now</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title" data-key="ath_title">Our Athletes</h2>
+
+<div class="people-grid">
+
+<div class="person-card" onclick="openProfile('dmytro')">
+
+<img src="https://i.postimg.cc/2jb51xt6/43214-jpg.webp">
+
+<h3>Dmytro</h3>
+<p>Black Belt</p>
+
+</div>
+
+<div class="person-card" onclick="openProfile('oleg')">
+
+<img src="https://i.postimg.cc/pdc2T9YY/7879-jpg.webp">
+
+<h3>Oleg</h3>
+<p>Brown Belt</p>
+
+</div>
+
+<div class="person-card" onclick="openProfile('marta')">
+
+<img src="https://i.postimg.cc/rwL2F1Bn/14-jpg.webp">
+
+<h3>Marta</h3>
+<p>Blue Belt</p>
+
+</div>
+
+</div>
+
+
+<div id="profile" class="profile hidden">
+
+<button onclick="closeProfile()">Back</button>
+
+<h2 id="p_name"></h2>
+
+<p><b>Age:</b> <span id="p_age"></span></p>
+<p><b>Belt:</b> <span id="p_belt"></span></p>
+<p><b>Training since:</b> <span id="p_year"></span></p>
+
+<p><b>Achievements:</b></p>
+
+<ul id="p_medals"></ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="section bg-light">
+
+<div class="container">
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title center-align" data-key="nav_contact">Contact</h2>
+            <div class="contact-grid-new">
+                <div class="map-box" data-aos="fade-right">
+                    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d111002.345678!2d-74.05!3d40.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJudo%20Sambo%20Center%20New%20York!5e0!3m2!1sen!2sus!4v1700000000000" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+ </div>
+
+                <div class="info-side" data-aos="fade-left">
+                    <form class="nice-form" id="joinForm" action="https://formspree.io/f/xeejnnyd" method="POST">
+                        <h3 data-key="btn_join">Join Now</h3>
+                        <input type="text" name="name" data-key="form_name_placeholder" placeholder="Your Name" required>
+                        <input id="phone" type="text" data-key="form_phone_placeholder" placeholder="Phone Number">
+                        <select name="gym" required>
+                            <option value="" disabled selected data-key="form_select_gym">Select Gym</option>
+                            <option value="SI" data-key="loc_si">Staten Island</option>
+                            <option value="BR" data-key="loc_br">Brooklyn</option>
+                        </select>
+                        <button type="submit" class="btn-form" data-key="btn_signup">Sign Up</button>
+                        
+                        <div class="social-icons-row">
+                            <a href="https://instagram.com/judosambocenter" target="_blank" class="mini-icon insta"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/sambocenter" target="_blank" class="mini-icon fb"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@judocenterny" target="_blank" class="mini-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                        <p id="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
