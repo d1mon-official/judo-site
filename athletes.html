@@ -47,80 +47,53 @@
 
 
 <section class="athletes-section">
-        <div class="container">
-            <h1 class="section-title" data-aos="fade-up">Our Champions</h1>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Meet the future of Judo</p>
+    <div class="container">
+        <h1 class="section-title" data-aos="fade-up">Our Team</h1>
 
-            <div class="people-grid">
-                <div class="coach-card" data-aos="zoom-in" onclick="openProfile('oleg')">
-                    <div class="coach-image">
-                        <img src="https://i.postimg.cc/pdc2T9YY/7879-jpg.webp" alt="Oleg">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Oleg</h3>
-                        <p>Brown Belt</p>
-                        <span class="view-profile">View Profile <i class="fas fa-chevron-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="coach-card" data-aos="zoom-in" data-aos-delay="100" onclick="openProfile('dmytro')">
-                    <div class="coach-image">
-                        <img src="https://i.postimg.cc/2jb51xt6/43214-jpg.webp" alt="Dmytro">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Dmytro</h3>
-                        <p>Black Belt</p>
-                        <span class="view-profile">View Profile <i class="fas fa-chevron-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="coach-card" data-aos="zoom-in" data-aos-delay="200" onclick="openProfile('marta')">
-                    <div class="coach-image">
-                        <img src="https://i.postimg.cc/rwL2F1Bn/14-jpg.webp" alt="Marta">
-                    </div>
-                    <div class="coach-info">
-                        <h3>Marta</h3>
-                        <p>Blue Belt</p>
-                        <span class="view-profile">View Profile <i class="fas fa-chevron-right"></i></span>
-                    </div>
-                </div>
+        <div class="people-grid">
+            <div class="coach-card" onclick="openProfile('oleg')">
+                <div class="coach-image"><img src="https://i.postimg.cc/pdc2T9YY/7879-jpg.webp"></div>
+                <div class="coach-info"><h3>Oleg</h3><p>Brown Belt</p></div>
             </div>
+            <div class="coach-card" onclick="openProfile('dmytro')">
+                <div class="coach-image"><img src="https://i.postimg.cc/2jb51xt6/43214-jpg.webp"></div>
+                <div class="coach-info"><h3>Dmytro</h3><p>Black Belt</p></div>
+            </div>
+            <div class="coach-card" onclick="openProfile('marta')">
+                <div class="coach-image"><img src="https://i.postimg.cc/rwL2F1Bn/14-jpg.webp"></div>
+                <div class="coach-info"><h3>Marta</h3><p>Blue Belt</p></div>
+            </div>
+        </div>
 
-            <div id="profile" class="profile hidden">
-                <button onclick="closeProfile()" class="btn-back">
-                    <i class="fas fa-arrow-left"></i> Back to Team
-                </button>
-
-                <div class="profile-card-layout">
-                    <div class="profile-details">
-                        <h2 id="p_name">Athlete Name</h2>
-                        
-                        <div class="profile-stats">
-                            <p><strong>Born:</strong> <span id="p_birth"></span></p>
-                            <p><strong>Rank:</strong> <span id="p_belt"></span></p>
-                            <p><strong>In Judo since:</strong> <span id="p_year"></span></p>
-                        </div>
-                        
-                        <div class="profile-bio">
-                            <h4>Biography</h4>
-                            <p id="p_bio">Biography text will appear here...</p>
-                        </div>
-
-                        <div class="profile-social-box">
-                            <p>Social Media:</p>
-                            <a id="p_insta" href="#" target="_blank" class="mini-icon insta">
-                                <i class="fab fa-instagram"></i> Instagram
-                            </a>
-                        </div>
+        <div id="profile" class="profile hidden">
+            <button onclick="closeProfile()" class="btn-back" data-key="profile_back">Back to Team</button>
+            
+            <div class="profile-layout">
+                <div class="profile-text">
+                    <h2 id="p_name"></h2>
+                    <div class="info-row">
+                        <p><strong data-key="profile_birth">Birth Year:</strong> <span id="p_birth"></span></p>
+                        <p><strong data-key="profile_since">Training since:</strong> <span id="p_year"></span></p>
+                        <p><strong data-key="profile_belt">Belt:</strong> <span id="p_belt"></span></p>
                     </div>
-
-                    <div class="profile-photo">
-                        <img id="p_image" src="" alt="Athlete Photo">
+                    <div class="bio-box">
+                        <h4 data-key="profile_bio_title">Biography</h4>
+                        <p id="p_bio"></p>
                     </div>
+                    <div class="socials">
+                        <a id="p_insta" href="#" target="_blank" class="insta-link">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <div class="profile-media">
+                    <img id="p_image" src="" alt="Photo">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
