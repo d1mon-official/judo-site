@@ -3,102 +3,180 @@ const translations = {
         nav_home: "Головна", nav_about: "Про клуб", nav_schedule: "Розклад", nav_contact: "Контакти",
         hero_title: "JUDO CENTER", btn_join: "Приєднатися",
         about_title: "Про наш Центр",
-        about_p: "Центр дзюдо був заснований у 1996 році. За останні 20 років наші учні брали участь у численних регіональних, національних та міжнародних змаганнях. Багато з них стали чемпіонами США та переможцями міжконтинентальних турнірів. Троє наших вихованців були відібрані до збірної США для участі в Панамериканських змаганнях. Сьогодні в клубі активно тренуються 150 учнів віком від 5 до 65 років. Головний тренер клубу — Фелікс Свердлін, має чорний пояс (5 дан). Дзюдо — це не просто спорт, це стиль життя. Наші учні стають частиною великої Дзюдо-родини!",
-        sched_title: "Розклад занять", loc_si: "Стейтен-Айленд", loc_br: "Бруклін",
-        footer_title: "Приєднуйтесь до нашої родини",
-        footer_text: "Почніть свій шлях сьогодні з професійними тренерами.",
-        form_name_placeholder: "Ваше ім'я", form_phone_placeholder: "Номер телефону",
-        form_select_gym: "Оберіть зал", btn_signup: "Записатися",
-        profile_birth: "Рік народження:", profile_since: "Займається з:", profile_belt: "Пояс:", profile_bio_title: "Біографія", profile_back: "← Назад до команди"
+        about_p: "Центр дзюдо  був заснований у 1996 році. За останні 20 років наші учні брали участь у численних регіональних, національних та міжнародних змаганнях. Багато з них стали чемпіонами США та переможцями міжконтинентальних турнірів. Троє наших вихованців були відібрані до збірної США для участі в Панамериканських змаганнях. Сьогодні в клубі активно тренуються 150 учнів віком від 5 до 65 років. Групи та заняття розділені за віком. Головний тренер клубу — Фелікс Свердлін, має чорний пояс (5 дан) та кваліфікацію тренера міжнародного класу. Дзюдо — це олімпійський вид спортy. Але це не просто спорт, це стиль життя. Наші учні отримують не лише фізичну підготовку, а й інтенсивну психологічну підготовку. Наші вихованці та їхні батьки часто зустрічаються на вечірках, святкують дні народження та навіть разом їздять у відпустку. Вони стають частиною великої Дзюдо-родини!",
+        sched_title: "Розклад занять", loc_si: "📍 Staten Island", loc_br: "📍 Brooklyn",
+        group_kids: "Діти (5-7 років)", group_adults: "Старша група", group_fit: "Judo + Fitness (4-6 років)",
+        days_1: "Пн • Ср • Пт", days_week: "Вт • Чт | Суб", days_fit: "Вівторок • Четвер | 17:00 – 18:00",
+        time_tue_thu: "18:00 – 19:30 (Вт/Чт)", time_sat: "10:30 – 12:00 (Сб)",
+        time_tue_thu_adults: "19:30 – 21:00 (Вт/Чт)", time_sat_adults: "12:00 – 13:30 (Сб)",
+        fit_exp: "Експериментальна група • 📍 Brooklyn", fit_limit: "12 занять на місяць", 
+        btn_signup: "Записатися", follow_us: "Слідкуйте за нами у соцмережах:",
+        see_more: "Хочете побачити більше фото та відео?", gallery_title: "Наше життя в залі",
+        form_select_gym: "Виберіть зал", form_name_placeholder: "Ваше ім'я", form_phone_placeholder: "Номер телефону"
     },
     en: {
         nav_home: "Home", nav_about: "About", nav_schedule: "Schedule", nav_contact: "Contact",
-        hero_title: "JUDO CENTER", btn_join: "Join Us",
-        about_title: "About our Center",
-        about_p: "Judo Center was founded in 1996. Over the last 20 years, our students have participated in numerous competitions. Many have become US champions. Today, 150 students train in the club. Head coach — Felix Sverdlin (5th dan). Judo is not just a sport, it's a lifestyle. Our students become part of a big Judo family!",
-        sched_title: "Class Schedule", loc_si: "Staten Island", loc_br: "Brooklyn",
-        footer_title: "Join Our Family",
-        footer_text: "Start your journey today with professional coaches.",
-        form_name_placeholder: "Your Name", form_phone_placeholder: "Phone Number",
-        form_select_gym: "Select Gym", btn_signup: "Sign Up",
-        profile_birth: "Birth Year:", profile_since: "Training since:", profile_belt: "Belt:", profile_bio_title: "Biography", profile_back: "← Back to Team"
+        hero_title: "JUDO CENTER", btn_join: "Join Now",
+        about_title: "About Our Center",
+        about_p: "Judo Center was founded in the year 1996. For the past 20 years, our students participated in many regional, national and international competitions. Many of them became champions of USA and winners of intercontinental tournaments. Three of our students were selected to be part of Team USA to compete at the Pan-American competition. The club has an active roster of 150 students, with ages ranging from 5 to 65 years old. The groups and classes are broken down by age. The head trainer of our club, Felix Sverdlin, has the “5 Dan Black Belt” and holds the professional qualification of an International Coach. Judo is an Olympic sport. But judo is not just simply a sport, its a lifestyle. Our students not only receive physical training but very intensive mental coaching. Our trainees and their parents often meet at various parties, celebrate birthdays together and even go on vacations with one another. They become parts of the Judo Family!",
+        sched_title: "Class Schedule", loc_si: "📍 Staten Island", loc_br: "📍 Brooklyn",
+        group_kids: "Kids (5-7 years)", group_adults: "Adults Group", group_fit: "Judo + Fitness (4-6 years)",
+        days_1: "Mon • Wed • Fri", days_week: "Tue • Thu | Sat", days_fit: "Tuesday • Thursday | 5:00 PM – 6:00 PM",
+        time_tue_thu: "6:00 PM – 7:30 PM (Tue/Thu)", time_sat: "10:30 AM – 12:00 PM (Sat)",
+        time_tue_thu_adults: "7:30 PM – 9:00 PM (Tue/Thu)", time_sat_adults: "12:00 PM – 1:30 PM (Sat)",
+        fit_exp: "Experimental group • 📍 Brooklyn", fit_limit: "12 classes per month", 
+        btn_signup: "Sign Up", follow_us: "Follow us on social media:",
+        see_more: "Want to see more photos and videos?", gallery_title: "Our Life in the Gym",
+        form_select_gym: "Select Gym", form_name_placeholder: "Your Name", form_phone_placeholder: "Phone Number"
     },
     ru: {
         nav_home: "Главная", nav_about: "О клубе", nav_schedule: "Расписание", nav_contact: "Контакты",
         hero_title: "JUDO CENTER", btn_join: "Присоединиться",
         about_title: "О нашем Центре",
-        about_p: "Центр дзюдо был основан в 1996 году. За последние 20 лет наши ученики участвовали в многочисленных соревнованиях. Многие стали чемпионами США. Сегодня в клубе тренируются 150 учеников. Главный тренер — Феликс Свердлин (5 дан). Дзюдо — это стиль жизни. Наши ученики становятся частью большой Дзюдо-семьи!",
-        sched_title: "Расписание занятий", loc_si: "Стейтен-Айленд", loc_br: "Бруклин",
-        footer_title: "Присоединяйтесь к нашей семье",
-        footer_text: "Начните свой путь сегодня с профессиональными тренерами.",
-        form_name_placeholder: "Ваше имя", form_phone_placeholder: "Номер телефона",
-        form_select_gym: "Выберите зал", btn_signup: "Записаться",
-        profile_birth: "Год рождения:", profile_since: "Занимается с:", profile_belt: "Пояс:", profile_bio_title: "Биография", profile_back: "← Назад к команде"
+        about_p: "Центр дзюдо был основан в 1996 году. За последние 20 лет наши ученики участвовали во многих региональных, национальных и международных соревнованиях. Многие стали чемпионами США и победителями межконтинентальных турниров. Трое наших учеников вошли в состав сборной США для участия в Панамериканских соревнованиях. Сегодня в клубе тренируются 150 учеников в возрасте от 5 до 65 лет. Группы разделены по возрасту. Главный тренер клуба — Феликс Свердлин (черный пояс, 5 дан), тренер международного класса. Дзюдо — это олимпийский вид спорта. Но это не просто спорт, это образ жизни. Наши ученики получают не только физическую, но и интенсивную психологическую подготовку. Наши воспитанники и их родители часто встречаются на праздниках, отмечают дни рождения и даже вместе ездят в отпуск. Они становятся частью большой Дзюдо-семьи!",
+        sched_title: "Расписание занятий", loc_si: "📍 Статен-Айленд", loc_br: "📍 Бруклин",
+        group_kids: "Дети (5-7 лет)", group_adults: "Старшая группа", group_fit: "Дзюдо + Фитнес (4-6 лет)",
+        days_1: "Пн • Ср • Пт", days_week: "Вт • Чт | Суб", days_fit: "Вторник • Четверг | 17:00 – 18:00",
+        time_tue_thu: "18:00 – 19:30 (Вт/Чт)", time_sat: "10:30 – 12:00 (Сб)",
+        time_tue_thu_adults: "19:30 – 21:00 (Вт/Чт)", time_sat_adults: "12:00 – 13:30 (Сб)",
+        fit_exp: "Экспериментальная группа • 📍 Бруклин", fit_limit: "12 занятий в месяц", 
+        btn_signup: "Записаться", follow_us: "Следите за нами в соцсетях:",
+        see_more: "Хотите увидеть больше фото и видео?", gallery_title: "Наша жизнь в зале",
+        form_select_gym: "Выберите зал", form_name_placeholder: "Ваше имя", form_phone_placeholder: "Номер телефона"
     }
 };
 
-const athletes = {
-    oleg: {
-        name: "Oleg", birth: "2009", since: "2018", belt: "Brown Belt",
-        bio: "Олег — амбітний спортсмен. Спеціалізується на техніці кидків через стегно. Багаторазовий призер міських змагань.",
-        insta: "https://instagram.com/oleg_judo", img: "https://i.postimg.cc/pdc2T9YY/7879-jpg.webp"
-    },
-    dmytro: {
-        name: "Dmytro", birth: "2008", since: "2016", belt: "Black Belt",
-        bio: "Дмитро займається дзюдо більше 8 років. Його витримка допомагає перемагати сильніших суперників.",
-        insta: "https://instagram.com/dmytro_judo", img: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp"
-    },
-    marta: {
-        name: "Marta", birth: "2010", since: "2020", belt: "Blue Belt",
-        bio: "Марта показує чудові результати завдяки своїй швидкості та техніці в партері.",
-        insta: "https://instagram.com/marta_judo", img: "https://i.postimg.cc/rwL2F1Bn/14-jpg.webp"
-    }
-};
-
-function openProfile(id) {
-    const p = athletes[id];
-    if (!p) return;
-    document.querySelector(".people-grid").style.display = "none";
-    document.querySelector(".section-title").style.display = "none"; // Ховаємо заголовок "Our Team"
-    const profileDiv = document.getElementById("profile");
-    profileDiv.classList.remove("hidden");
-
-    document.getElementById("p_name").innerText = p.name;
-    document.getElementById("p_birth").innerText = p.birth;
-    document.getElementById("p_year").innerText = p.since;
-    document.getElementById("p_belt").innerText = p.belt;
-    document.getElementById("p_bio").innerText = p.bio;
-    document.getElementById("p_image").src = p.img;
-    document.getElementById("p_insta").href = p.insta;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function closeProfile() {
-    document.querySelector(".people-grid").style.display = "grid";
-    document.querySelector(".section-title").style.display = "block";
-    document.getElementById("profile").classList.add("hidden");
-}
-
-function changeLang(lang, btn) {
-    if (btn) {
-        document.querySelectorAll('.lang-node').forEach(node => node.classList.remove('active'));
-        btn.classList.add('active');
-    }
-
+function changeLang(lang, btnElement) {
+    if (!translations[lang]) return;
     document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
-        if (translations[lang] && translations[lang][key]) {
-            if (el.tagName === 'INPUT' || el.tagName === 'SELECT') {
-                el.placeholder = translations[lang][key];
-                if (el.tagName === 'SELECT') el.options[0].text = translations[lang][key];
-            } else {
-                el.innerText = translations[lang][key];
-            }
+        if (translations[lang][key]) {
+            if (el.tagName === 'OPTION') el.text = translations[lang][key];
+            else if (el.tagName === 'INPUT') el.placeholder = translations[lang][key];
+            else el.innerText = translations[lang][key];
         }
     });
+    document.querySelectorAll('.lang-node').forEach(btn => btn.classList.remove('active'));
+    if (btnElement) btnElement.classList.add('active');
+    localStorage.setItem('preferredLang', lang);
 }
 
-// Запуск мови при завантаженні
-document.addEventListener("DOMContentLoaded", () => {
-    changeLang('en'); 
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ duration: 1000, once: true });
+    const savedLang = localStorage.getItem('preferredLang') || 'uk';
+    const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === (savedLang === 'en' ? 'en' : savedLang.toLowerCase()));
+    changeLang(savedLang, btn);
 });
+window.scrollTo({
+  top: targetElement.offsetTop,
+  behavior: 'auto' 
+});
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+  const phone = document.getElementById("phone");
+
+  if (!phone) return;
+
+  // only add +1 if user hasn't typed anything yet
+  phone.addEventListener("focus", function () {
+    if (phone.value.trim() === "") {
+      phone.value = "+1 ";
+    }
+  });
+
+  // Optional: if translation changes dynamically, ensure +1 is not removed
+  const observer = new MutationObserver(() => {
+    if (phone === document.activeElement && phone.value === "") {
+      phone.value = "+1 ";
+    }
+  });
+
+  observer.observe(phone, { attributes: true, attributeFilter: ['placeholder'] });
+});const athletes = {
+
+dmytro:{
+name:"Dmytro",
+age:16,
+belt:"Black Belt",
+year:"2016",
+medals:[
+"NY Champion",
+"Regional Champion"
+]
+},
+
+oleg:{
+name:"Oleg",
+age:15,
+belt:"Brown Belt",
+year:"2018",
+medals:[
+"City Champion"
+]
+},
+
+marta:{
+name:"Marta",
+age:14,
+belt:"Blue Belt",
+year:"2020",
+medals:[
+"Junior Cup Winner"
+]
+}
+
+}
+
+function openProfile(id){
+
+const p=athletes[id]
+
+document.querySelector(".people-grid").style.display="none"
+
+document.getElementById("profile").classList.remove("hidden")
+
+document.getElementById("p_name").innerText=p.name
+document.getElementById("p_age").innerText=p.age
+document.getElementById("p_belt").innerText=p.belt
+document.getElementById("p_year").innerText=p.year
+
+const medals=document.getElementById("p_medals")
+
+medals.innerHTML=""
+
+p.medals.forEach(m=>{
+const li=document.createElement("li")
+li.innerText=m
+medals.appendChild(li)
+})
+
+}
+
+function closeProfile(){
+
+document.querySelector(".people-grid").style.display="grid"
+
+document.getElementById("profile").classList.add("hidden")
+
+}
