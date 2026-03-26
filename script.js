@@ -115,11 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(phone, { attributes: true, attributeFilter: ['placeholder'] });
 });const athletes = {
 
-dmytro:{
-name:"Dmytro",
+dmytrii:{
+name:"Dmytrii",
 age:16,
-belt:"Black Belt",
-year:"2016",
+belt:"Green Belt",
+year:"2009",
 medals:[
 "NY Champion",
 "Regional Champion"
