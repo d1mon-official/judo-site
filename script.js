@@ -72,3 +72,58 @@ window.scrollTo({
   top: targetElement.offsetTop,
   behavior: 'auto' 
 });
+const athletes = {
+    dmytro: {
+        name: "Dmytro",
+        birthYear: "2008",
+        belt: "Black Belt",
+        year: "2016",
+        bio: "Dmytro is one of our most dedicated athletes. He started judo at a young age and has shown incredible discipline and technique. He is a multiple-time regional champion.",
+        instagram: "https://instagram.com/your_account",
+        img: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp"
+    },
+    oleg: {
+        name: "Oleg",
+        birthYear: "2009",
+        belt: "Brown Belt",
+        year: "2018",
+        bio: "Oleg is known for his explosive power and competitive spirit. Outside the gym, he enjoys sports photography and active recreation with the Judo Family.",
+        instagram: "https://instagram.com/your_account",
+        img: "https://i.postimg.cc/pdc2T9YY/7879-jpg.webp"
+    },
+    marta: {
+        name: "Marta",
+        birthYear: "2010",
+        belt: "Blue Belt",
+        year: "2020",
+        bio: "Marta is a rising star in our junior division. Her focus on technique and strategy has led her to numerous podium finishes in city competitions.",
+        instagram: "https://instagram.com/your_account",
+        img: "https://i.postimg.cc/rwL2F1Bn/14-jpg.webp"
+    }
+};
+
+function openProfile(id) {
+    const p = athletes[id];
+    if (!p) return;
+
+    document.querySelector(".people-grid").style.display = "none";
+    const profileSection = document.getElementById("profile");
+    profileSection.classList.remove("hidden");
+
+    // Заповнення даних
+    document.getElementById("p_name").innerText = p.name;
+    document.getElementById("p_birth").innerText = p.birthYear;
+    document.getElementById("p_belt").innerText = p.belt;
+    document.getElementById("p_year").innerText = p.year;
+    document.getElementById("p_bio").innerText = p.bio;
+    document.getElementById("p_image").src = p.img;
+    document.getElementById("p_insta").href = p.instagram;
+
+    // Плавний скрол вгору до картки
+    profileSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function closeProfile() {
+    document.querySelector(".people-grid").style.display = "grid";
+    document.getElementById("profile").classList.add("hidden");
+}
