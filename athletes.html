@@ -98,11 +98,7 @@
 
 
 
-<section class="section bg-light">
-
-<div class="container">
-
-    <section id="contact" class="section">
+<section id="contact" class="section">
         <div class="container">
             <h2 class="section-title center-align" data-key="nav_contact">Contact</h2>
             <div class="contact-grid-new">
@@ -122,7 +118,7 @@
                     <form class="nice-form" id="joinForm" action="https://formspree.io/f/xeejnnyd" method="POST">
                         <h3 data-key="btn_join">Join Now</h3>
                         <input type="text" name="name" data-key="form_name_placeholder" placeholder="Your Name" required>
-                        <input id="phone" type="text" data-key="form_phone_placeholder" placeholder="Phone Number">
+                        <input type="tel" name="phone" data-key="form_phone_placeholder" placeholder="Phone Number" required>
                         <select name="gym" required>
                             <option value="" disabled selected data-key="form_select_gym">Select Gym</option>
                             <option value="SI" data-key="loc_si">Staten Island</option>
@@ -142,8 +138,9 @@
         </div>
     </section>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
 
 </body>
 </html>
