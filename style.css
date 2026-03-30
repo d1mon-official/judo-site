@@ -783,3 +783,360 @@ html {
     color: #6b7280;
     line-height: 1.6;
 }
+.people-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.person-card{
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.person-card:hover{
+transform:translateY(-6px);
+}
+
+.person-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.profile{
+max-width:700px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hidden{
+display:none;
+}
+.profile-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.profile-media img {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn-back {
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.bio-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f0f4f8;
+    border-left: 4px solid var(--red);
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+    .profile-layout {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+/* Оверлей на весь екран */
+.profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98); /* Майже непрозорий білий */
+    z-index: 9999;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-overlay.hidden {
+    display: none;
+}
+
+.profile-content {
+    max-width: 1000px;
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+    padding: 20px;
+}
+
+/* Кнопка закриття (Х) */
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--red);
+}
+
+.profile-layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.profile-media img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Щоб при відкритті профілю сторінка не крутилася */
+body.no-scroll {
+    overflow: hidden;
+}
+/* ОВЕРЛЕЙ (ФОН) */
+.profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Темний фон для фокусу */
+    z-index: 2000;
+    display: none; /* Сховано за замовчуванням */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Розмиття фону (карти) */
+    padding: 20px;
+}
+
+.profile-overlay.active {
+    display: flex; /* Показуємо при виклику */
+}
+
+/* КАРТКА ПРОФІЛЮ */
+.profile-card {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-x {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+}
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-img-side {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.profile-info-side {
+    flex: 1.2;
+    padding: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.bio-text { margin-top: 25px; }
+.bio-text p { color: #555; line-height: 1.6; }
+
+.insta-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* АДАПТИВНІСТЬ ДЛЯ ТЕЛЕФОНІВ */
+@media (max-width: 768px) {
+    .profile-content { flex-direction: column; }
+    .profile-info-side { padding: 20px; }
+}
+/* ATHLETES GRID */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-bottom: 20px;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card img { width: 100%; height: 300px; object-fit: cover; }
+
+.view-btn {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: var(--red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* OVERLAY SETUP */
+.profile-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 10000;
+    display: none; /* Hidden */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.profile-overlay.active { display: flex; }
+
+.profile-card {
+    background: white;
+    width: 90%; max-width: 900px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    animation: popUp 0.4s ease;
+}
+
+@keyframes popUp {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.profile-img-side { flex: 1; }
+.profile-img-side img { width: 100%; height: 100%; object-fit: cover; }
+.profile-info-side { flex: 1.2; padding: 40px; }
+
+.close-x {
+    position: absolute; top: 15px; right: 20px;
+    font-size: 40px; border: none; background: none; cursor: pointer;
+}
+
+.stats-grid p { margin-bottom: 10px; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+
+.insta-link {
+    display: inline-block; margin-top: 20px;
+    color: white; background: #e1306c;
+    padding: 10px 20px; border-radius: 5px; text-decoration: none;
+}
+/* --- FULL PAGE PROFILE STYLES --- */
+.btn-back {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: var(--red);
+    transform: translateX(-5px);
+}
+
+.profile-full-page {
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+    min-height: 60vh;
+}
+
+/* Mobile responsive for the new page */
+@media (max-width: 768px) {
+    .profile-full-page {
+        flex-direction: column;
+    }
+    .profile-info-side {
+        padding: 30px 20px;
+    }
+}
