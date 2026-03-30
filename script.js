@@ -145,27 +145,39 @@ const athletes = {
     }
 };
 
+// --- ЛОГІКА СТОРІНКИ ПРОФІЛЮ ---
+document.addEventListener("DOMContentLoaded", function() {
+    // Перевіряємо, чи ми на сторінці профілю (чи є там блок profileContainer)
+    if (document.getElementById("profileContainer")) {
+        loadProfilePage();
+    }
+});
+
 function loadProfilePage() {
-    // 1. Grab the ID from the web address (e.g., ?id=marta)
+    // 1. Беремо ID з посилання (наприклад: profile.html?id=marta)
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    // 2. Find the athlete in our data
+    // 2. Шукаємо атлета в нашій базі (об'єкт athletes)
     const p = athletes[id];
 
-    // 3. If someone types a wrong ID or opens the page directly
+    // 3. Якщо ID неправильний або його немає
     if (!p) {
-        document.getElementById("profileContainer").innerHTML = "<h2>Athlete not found! Please go back.</h2>";
+        document.getElementById("profileContainer").innerHTML = "<h2 style='padding: 30px;'>Athlete not found! Please go back.</h2>";
         return;
     }
 
-    // 4. Inject the correct data into the page
-    document.title = p.name + " | Profile"; // Changes the browser tab name
+    // 4. Заповнюємо дані!
+    document.title = p.name + " | Profile"; 
     document.getElementById("p_name").innerText = p.name;
     document.getElementById("p_birth").innerText = p.birth;
     document.getElementById("p_belt").innerText = p.belt;
     document.getElementById("p_year").innerText = p.year;
     document.getElementById("p_bio").innerText = p.bio;
     document.getElementById("p_image").src = p.image;
-    document.getElementById("p_insta").href = p.insta;
+    
+    const instaElement = document.getElementById("p_insta");
+    if (instaElement && p.insta) {
+        instaElement.href = p.insta;
+    }
 }
