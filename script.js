@@ -120,7 +120,7 @@ const athletes = {
         name: "Dmytrii",
         birth: "2009",
         belt: "Green Belt",
-        year: "2018",
+        year: "2017",
         bio: "Dmytrii is a highly technical judoka who excels in throwing techniques. He has won multiple state championships and aspires to compete at the national level.",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/rmqXkhRJ/2026-02-10-19-31-45.jpg"
@@ -129,16 +129,16 @@ const athletes = {
         name: "Oleg",
         birth: "2008",
         belt: "Brown Belt",
-        year: "2017",
+        year: "2026",
         bio: "Oleg is known for his incredible strength and groundwork. He is one of the most senior students in the youth program and helps mentor junior athletes.",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp"
     },
     marta: {
-        name: "Marta",
+        name: "Artur",
         birth: "2010",
         belt: "Blue Belt",
-        year: "2020",
+        year: "2018",
         bio: "Marta is a rising star in the girls' division. Since joining in 2020, she has shown rapid progress and an unbreakable competitive spirit.",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/rwL2F1Bn/14-jpg.webp"
