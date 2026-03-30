@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athlete Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background-color: var(--light);">
+
+    <div class="container" style="padding: 50px 20px;">
+        <a href="athletes.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Back to Team
+        </a>
+
+        <div class="profile-full-page" id="profileContainer">
+            <div class="profile-img-side">
+                <img id="p_image" src="" alt="Athlete Photo">
+            </div>
+            
+            <div class="profile-info-side">
+                <h1 id="p_name">Loading...</h1>
+                
+                <div class="stats-grid">
+                    <p><strong>Birth Year:</strong> <span id="p_birth"></span></p>
+                    <p><strong>In Club Since:</strong> <span id="p_year"></span></p>
+                    <p><strong>Belt:</strong> <span id="p_belt"></span></p>
+                </div>
+                
+                <div class="bio-text">
+                    <h3>Biography</h3>
+                    <p id="p_bio"></p>
+                </div>
+                
+                <a id="p_insta" href="#" target="_blank" class="insta-link">
+                    <i class="fab fa-instagram"></i> Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Tell the page to load the athlete's data as soon as it opens
+        window.onload = loadProfilePage;
+    </script>
+</body>
+</html>
