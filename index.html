@@ -5,16 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Judo Center New York – professional judo training for kids, teens and adults in New York. Classes, competitions and coaching.">
     <title>Judo Center New York | Judo Training for Kids & Adults</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/jq4s9dLf/091.jpg">
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LH93M6R3T5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LH93M6R3T5');
-</script>
+    
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1776084879707821"
      crossorigin="anonymous"></script>
@@ -51,6 +42,16 @@
         <div class="hero-content" data-aos="zoom-in">
             <h1 data-key="hero_title">JUDO CENTER NEW YORK</h1>
      <p class="hero-subtext">STATEN ISLAND • BROOKLYN</p>
+        </div>
+    </section>
+
+    <section class="athletes-home-cta">
+        <div class="container athletes-home-inner">
+            <div>
+                <h2 data-key="athlete_cta_title">Our Athletes</h2>
+                <p data-key="athlete_cta_text">Meet the judoka who represent our team on the mat.</p>
+            </div>
+            <a href="athletes.html" class="btn-hero-athletes" data-key="btn_athletes">View Athletes</a>
         </div>
     </section>
 
@@ -162,12 +163,12 @@
                 <div class="info-side" data-aos="fade-left">
                     <form class="nice-form" id="joinForm" action="https://formspree.io/f/xeejnnyd" method="POST">
                         <h3 data-key="btn_join">Join Now</h3>
-                        <input type="text" name="Name" data-key="form_name_placeholder" placeholder="Your Name" required>
-                        <input type="tel" name="Phone" data-key="form_phone_placeholder" placeholder="Phone Number" required>
-                        <select name="Gym" required>
+                        <input type="text" name="name" data-key="form_name_placeholder" placeholder="Your Name" required>
+                        <input id="phone" type="text" data-key="form_phone_placeholder" placeholder="Phone Number">
+                        <select name="gym" required>
                             <option value="" disabled selected data-key="form_select_gym">Select Gym</option>
-                            <option value="Staten Island" data-key="loc_si">Staten Island</option>
-                            <option value="Brooklyn" data-key="loc_br">Brooklyn</option>
+                            <option value="SI" data-key="loc_si">Staten Island</option>
+                            <option value="BR" data-key="loc_br">Brooklyn</option>
                         </select>
                         <button type="submit" class="btn-form" data-key="btn_signup">Sign Up</button>
                         
