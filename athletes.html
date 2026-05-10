@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athletes | Judo Center</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/jq4s9dLf/091.jpg">
+    <title>Athlete Profile</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="profile-page" style="background-color: var(--light);">
 
     <header class="main-header">
         <div class="container header-container">
@@ -23,73 +21,56 @@
                     <button class="lang-node active" onclick="changeLang('en', this)">EN</button>
                     <button class="lang-node" onclick="changeLang('ru', this)">RU</button>
                 </div>
-                <a href="index.html#contact" class="btn-header-join">Join Us</a>
+                <a href="index.html#contact" class="btn-header-join" data-key="btn_join">Join Us</a>
             </div>
         </div>
     </header>
 
-    <section class="athletes-section">
-        <div class="container">
-            <h2 class="section-title" style="margin-top: 120px;">Our Team</h2>
-<div class="cards">
-    <div class="card" onclick="window.location.href='profile.html?id=dmytrii'" data-aos="fade-up">
-        <img src="https://i.postimg.cc/rmqXkhRJ/2026-02-10-19-31-45.jpg" alt="Dmytrii">
-        <div class="card-info">
-            <h3>Dmytrii</h3>
-            <p>Blue Belt</p>
-            <button class="view-btn">View Profile</button>
-        </div>
-    </div>
+    <div class="container profile-page-container">
+        <a href="athletes.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i> <span data-key="back_to_team">Back to Team</span>
+        </a>
 
-    <div class="card" onclick="window.location.href='profile.html?id=oleg'" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://i.postimg.cc/2jb51xt6/43214-jpg.webp" alt="Oleg">
-        <div class="card-info">
-            <h3>Oleg</h3>
-            <p>Brown Belt</p>
-            <button class="view-btn">View Profile</button>
-        </div>
-    </div>
-
-    <div class="card" onclick="window.location.href='profile.html?id=marta'" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://i.postimg.cc/rwL2F1Bn/14-jpg.webp" alt="Marta">
-        <div class="card-info">
-            <h3>Marta</h3>
-            <p>Blue Belt</p>
-            <button class="view-btn">View Profile</button>
-        </div>
-    </div>
-</div>
-        </div>
-    </section>
-
-    <div id="profile" class="profile-overlay">
-        <div class="profile-card">
-            <button class="close-x" onclick="closeProfile()">&times;</button>
-            <div class="profile-content">
-                <div class="profile-img-side">
-                    <img id="p_image" src="" alt="Athlete">
+        <div class="profile-full-page" id="profileContainer">
+            <div class="profile-img-side">
+                <img id="p_image" src="" alt="Athlete Photo">
+            </div>
+            
+            <div class="profile-info-side">
+                <h1 id="p_name">Loading...</h1>
+                
+                <div class="stats-grid">
+                    <p><strong data-key="profile_birth">Birth Date:</strong> <span id="p_birth"></span></p>
+                    <p><strong data-key="profile_since">In Club Since:</strong> <span id="p_year"></span></p>
+                    <p><strong data-key="profile_experience">Judo Experience:</strong> <span id="p_training"></span></p>
+                    <p><strong data-key="profile_belt">Belt:</strong> <span id="p_belt"></span></p>
                 </div>
-                <div class="profile-info-side">
-                    <h2 id="p_name"></h2>
-                    <div class="stats-grid">
-                        <p><strong>Birth Year:</strong> <span id="p_birth"></span></p>
-                        <p><strong>In Club Since:</strong> <span id="p_year"></span></p>
-                        <p><strong>Belt:</strong> <span id="p_belt"></span></p>
-                    </div>
-                    <div class="bio-text">
-                        <h3>Biography</h3>
-                        <p id="p_bio"></p>
-                    </div>
-                    <a id="p_insta" href="#" target="_blank" class="insta-link">
-                        <i class="fab fa-instagram"></i> Instagram Profile
-                    </a>
+                
+                <div class="bio-text">
+                    <h3 data-key="profile_bio_title">Biography</h3>
+                    <p id="p_bio"></p>
                 </div>
+
+                <div class="achievements-box">
+                    <h3 data-key="profile_achievements_title">Major Achievements</h3>
+                    <ul id="p_achievements"></ul>
+                </div>
+                
+                <a id="p_insta" href="#" target="_blank" class="insta-link">
+                    <i class="fab fa-instagram"></i> <span data-key="follow_instagram">Follow on Instagram</span>
+                </a>
             </div>
         </div>
+
+        <section class="related-athletes">
+            <h2 data-key="profile_more_athletes">Other Athletes</h2>
+            <div class="cards related-cards" id="relatedAthletesCards"></div>
+        </section>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <script>AOS.init();</script>
+    <script>
+        loadProfilePage();
+    </script>
 </body>
 </html>
