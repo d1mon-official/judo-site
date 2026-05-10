@@ -167,7 +167,7 @@ const athletes = {
                 birth: "September 22, 2009",
                 belt: "Blue Belt",
                 shortBio: "Ukrainian judoka from Lviv competing in the -73kg weight class, with experience in Ukrainian and U.S. tournaments.",
-                bio: "Dmytrii Malishevskyi is a dedicated and competitive judoka originally from Lviv, Ukraine. He began practicing judo in 2017, building his character through discipline, respect, and determination. His early judo path started at Judo Gorilla in Lviv, where he trained with Andriy Sheremeta and Volodymyr Lipatov. Dmytrii competes in the -73kg weight class and continues to focus on stronger technique, sharper timing, and bigger tournament goals. His dream is to become a Master of Sport in judo through hard work, discipline, and support from his family.",
+                bio: "Dmytrii Malishevskyi judoka originally from Lviv, Ukraine. He began practicing judo in 2017, building his character through discipline, respect, and determination. His early judo path started at Judo Gorilla in Lviv, where he trained with Andriy Sheremeta and Volodymyr Lipatov. Dmytrii competes in the -73kg weight class and continues to focus on stronger technique, sharper timing, and bigger tournament goals. His dream is to become a Master of Sport in judo through hard work, discipline, and support from his family.",
                 achievements: ["3rd Place - International Judo Tournament, Venice, Italy (2019)", "Champion - Lviv Regional Judo Championship, Ukraine (2024)", "1st Place - Staten Island Cup, New York, USA (2025)", "2nd Place - New York State Judo Championship, USA (2025)"]
             },
             uk: {
@@ -175,7 +175,7 @@ const athletes = {
                 birth: "22 вересня 2009",
                 belt: "Синій пояс",
                 shortBio: "Український дзюдоїст зі Львова, який виступає у ваговій категорії -73kg та має досвід турнірів в Україні й США.",
-                bio: "Дмитрій Малішевський - цілеспрямований і конкурентний дзюдоїст родом зі Львова, Україна. Він почав займатися дзюдо у 2017 році, і цей спорт сформував у ньому дисципліну, повагу та наполегливість. Його ранній шлях у дзюдо почався в Judo Gorilla у Львові, де він тренувався з Андрієм Шереметою та Володимиром Ліпатовим. Дмитрій виступає у ваговій категорії -73kg і продовжує працювати над сильнішою технікою, точнішим таймінгом і більшими турнірними цілями. Його мрія - стати Майстром спорту з дзюдо завдяки праці, дисципліні та підтримці родини.",
+                bio: "Дмитрій Малішевський - дзюдоїст родом зі Львова, Україна. Він почав займатися дзюдо у 2017 році, і цей спорт сформував у ньому дисципліну, повагу та наполегливість. Його ранній шлях у дзюдо почався в Judo Gorilla у Львові, де він тренувався з Андрієм Шереметою та Володимиром Ліпатовим. Дмитрій виступає у ваговій категорії -73kg і продовжує працювати над сильнішою технікою, точнішим таймінгом і більшими турнірними цілями. Його мрія - стати Майстром спорту з дзюдо завдяки праці, дисципліні та підтримці родини.",
                 achievements: ["3 місце - International Judo Tournament, Venice, Italy (2019)", "Чемпіон - Lviv Regional Judo Championship, Ukraine (2024)", "1 місце - Staten Island Cup, New York, USA (2025)", "2 місце - New York State Judo Championship, USA (2025)"]
             },
             ru: {
@@ -183,7 +183,7 @@ const athletes = {
                 birth: "22 сентября 2009",
                 belt: "Синий пояс",
                 shortBio: "Украинский дзюдоист из Львова, выступающий в весовой категории -73kg, с опытом турниров в Украине и США.",
-                bio: "Дмитрий Малишевский - целеустремленный и конкурентный дзюдоист родом из Львова, Украина. Он начал заниматься дзюдо в 2017 году, и этот спорт сформировал в нем дисциплину, уважение и настойчивость. Его ранний путь в дзюдо начался в Judo Gorilla во Львове, где он тренировался с Андреем Шереметой и Владимиром Липатовым. Дмитрий выступает в весовой категории -73kg и продолжает работать над более сильной техникой, точным таймингом и большими турнирными целями. Его мечта - стать Мастером спорта по дзюдо благодаря труду, дисциплине и поддержке семьи.",
+                bio: "Дмитрий Малишевский - дзюдоист родом из Львова, Украина. Он начал заниматься дзюдо в 2017 году, и этот спорт сформировал в нем дисциплину, уважение и настойчивость. Его ранний путь в дзюдо начался в Judo Gorilla во Львове, где он тренировался с Андреем Шереметой и Владимиром Липатовым. Дмитрий выступает в весовой категории -73kg и продолжает работать над более сильной техникой, точным таймингом и большими турнирными целями. Его мечта - стать Мастером спорта по дзюдо благодаря труду, дисциплине и поддержке семьи.",
                 achievements: ["3 место - International Judo Tournament, Venice, Italy (2019)", "Чемпион - Lviv Regional Judo Championship, Ukraine (2024)", "1 место - Staten Island Cup, New York, USA (2025)", "2 место - New York State Judo Championship, USA (2025)"]
             }
         }
