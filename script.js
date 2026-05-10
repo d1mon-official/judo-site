@@ -221,7 +221,7 @@ const athletes = {
         }
     },
 
-    marta: {
+    steven: {
         year: "2020",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/mZ1nKXr1/image.png",
@@ -317,7 +317,7 @@ const athletes = {
         }
     },
 
-    prydanik: {
+    daniel: {
         year: "2025",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/1zdQSksL/photo-2023-11-20-153-jpeg.jpg",
