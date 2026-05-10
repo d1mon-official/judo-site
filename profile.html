@@ -8,11 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body style="background-color: var(--light);">
+<body class="profile-page" style="background-color: var(--light);">
 
-    <div class="container" style="padding: 50px 20px;">
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://i.postimg.cc/8cz2HLvT/photo_2025_12_23_11_22_05_removebg_preview.png" class="logo-img">
+            </a>
+            <div class="header-right">
+                <div class="lang-selector">
+                    <button class="lang-node" onclick="changeLang('uk', this)">UA</button>
+                    <button class="lang-node active" onclick="changeLang('en', this)">EN</button>
+                    <button class="lang-node" onclick="changeLang('ru', this)">RU</button>
+                </div>
+                <a href="index.html#contact" class="btn-header-join" data-key="btn_join">Join Us</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container profile-page-container">
         <a href="athletes.html" class="btn-back">
-            <i class="fas fa-arrow-left"></i> Back to Team
+            <i class="fas fa-arrow-left"></i> <span data-key="back_to_team">Back to Team</span>
         </a>
 
         <div class="profile-full-page" id="profileContainer">
@@ -24,27 +40,37 @@
                 <h1 id="p_name">Loading...</h1>
                 
                 <div class="stats-grid">
-                    <p><strong>Birth Year:</strong> <span id="p_birth"></span></p>
-                    <p><strong>In Club Since:</strong> <span id="p_year"></span></p>
-                    <p><strong>Belt:</strong> <span id="p_belt"></span></p>
+                    <p><strong data-key="profile_birth">Birth Date:</strong> <span id="p_birth"></span></p>
+                    <p><strong data-key="profile_since">In Club Since:</strong> <span id="p_year"></span></p>
+                    <p><strong data-key="profile_experience">Judo Experience:</strong> <span id="p_training"></span></p>
+                    <p><strong data-key="profile_belt">Belt:</strong> <span id="p_belt"></span></p>
                 </div>
                 
                 <div class="bio-text">
-                    <h3>Biography</h3>
+                    <h3 data-key="profile_bio_title">Biography</h3>
                     <p id="p_bio"></p>
+                </div>
+
+                <div class="achievements-box">
+                    <h3 data-key="profile_achievements_title">Major Achievements</h3>
+                    <ul id="p_achievements"></ul>
                 </div>
                 
                 <a id="p_insta" href="#" target="_blank" class="insta-link">
-                    <i class="fab fa-instagram"></i> Follow on Instagram
+                    <i class="fab fa-instagram"></i> <span data-key="follow_instagram">Follow on Instagram</span>
                 </a>
             </div>
         </div>
+
+        <section class="related-athletes">
+            <h2 data-key="profile_more_athletes">Other Athletes</h2>
+            <div class="cards related-cards" id="relatedAthletesCards"></div>
+        </section>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // Tell the page to load the athlete's data as soon as it opens
-        window.onload = loadProfilePage;
+        loadProfilePage();
     </script>
 </body>
 </html>
