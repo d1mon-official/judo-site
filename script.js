@@ -12,7 +12,12 @@ const translations = {
         fit_exp: "Експериментальна група • 📍 Brooklyn", fit_limit: "12 занять на місяць", 
         btn_signup: "Записатися", follow_us: "Слідкуйте за нами у соцмережах:",
         see_more: "Хочете побачити більше фото та відео?", gallery_title: "Наше життя в залі",
-        form_select_gym: "Виберіть зал", form_name_placeholder: "Ваше ім'я", form_phone_placeholder: "Номер телефону"
+        form_select_gym: "Виберіть зал", form_name_placeholder: "Ваше ім'я", form_phone_placeholder: "Номер телефону",
+        athletes_title: "Наша команда", view_profile: "Профіль", since_label: "З", back_to_team: "Назад до команди", btn_athletes: "Дивитися атлетів",
+        athlete_cta_title: "Наші спортсмени", athlete_cta_text: "Познайомтеся з дзюдоїстами, які представляють нашу команду на татамі.", profile_more_athletes: "Інші спортсмени",
+        profile_birth: "Дата народження:", profile_since: "У клубі з:", profile_experience: "Стаж дзюдо:", profile_belt: "Пояс:",
+        profile_bio_title: "Біографія", profile_achievements_title: "Головні досягнення", follow_instagram: "Instagram профіль",
+        years_suffix: "+ років", started_in: "Почав у"
     },
     en: {
         nav_home: "Home", nav_about: "About", nav_schedule: "Schedule", nav_contact: "Contact",
@@ -27,7 +32,12 @@ const translations = {
         fit_exp: "Experimental group • 📍 Brooklyn", fit_limit: "12 classes per month", 
         btn_signup: "Sign Up", follow_us: "Follow us on social media:",
         see_more: "Want to see more photos and videos?", gallery_title: "Our Life in the Gym",
-        form_select_gym: "Select Gym", form_name_placeholder: "Your Name", form_phone_placeholder: "Phone Number"
+        form_select_gym: "Select Gym", form_name_placeholder: "Your Name", form_phone_placeholder: "Phone Number",
+        athletes_title: "Our Team", view_profile: "View Profile", since_label: "Since", back_to_team: "Back to Team", btn_athletes: "View Athletes",
+        athlete_cta_title: "Our Athletes", athlete_cta_text: "Meet the judoka who represent our team on the mat.", profile_more_athletes: "Other Athletes",
+        profile_birth: "Birth Date:", profile_since: "In Club Since:", profile_experience: "Judo Experience:", profile_belt: "Belt:",
+        profile_bio_title: "Biography", profile_achievements_title: "Major Achievements", follow_instagram: "Follow on Instagram",
+        years_suffix: "+ years", started_in: "Started in"
     },
     ru: {
         nav_home: "Главная", nav_about: "О клубе", nav_schedule: "Расписание", nav_contact: "Контакты",
@@ -42,12 +52,32 @@ const translations = {
         fit_exp: "Экспериментальная группа • 📍 Бруклин", fit_limit: "12 занятий в месяц", 
         btn_signup: "Записаться", follow_us: "Следите за нами в соцсетях:",
         see_more: "Хотите увидеть больше фото и видео?", gallery_title: "Наша жизнь в зале",
-        form_select_gym: "Выберите зал", form_name_placeholder: "Ваше имя", form_phone_placeholder: "Номер телефона"
+        form_select_gym: "Выберите зал", form_name_placeholder: "Ваше имя", form_phone_placeholder: "Номер телефона",
+        athletes_title: "Наша команда", view_profile: "Профиль", since_label: "С", back_to_team: "Назад к команде", btn_athletes: "Смотреть атлетов",
+        athlete_cta_title: "Наши спортсмены", athlete_cta_text: "Познакомьтесь с дзюдоистами, которые представляют нашу команду на татами.", profile_more_athletes: "Другие спортсмены",
+        profile_birth: "Дата рождения:", profile_since: "В клубе с:", profile_experience: "Стаж дзюдо:", profile_belt: "Пояс:",
+        profile_bio_title: "Биография", profile_achievements_title: "Главные достижения", follow_instagram: "Профиль Instagram",
+        years_suffix: "+ лет", started_in: "Начал в"
     }
 };
 
+function normalizeLang(lang) {
+    if (lang === 'ua') return 'uk';
+    if (translations[lang]) return lang;
+    return 'uk';
+}
+
+function getTranslation(key) {
+    const langPack = translations[currentLang] || translations.uk;
+    return langPack[key] || translations.en[key] || key;
+}
+
+let currentLang = normalizeLang(localStorage.getItem('preferredLang') || 'uk');
+
 function changeLang(lang, btnElement) {
+    lang = normalizeLang(lang);
     if (!translations[lang]) return;
+    currentLang = lang;
     document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
         if (translations[lang][key]) {
@@ -59,39 +89,49 @@ function changeLang(lang, btnElement) {
     document.querySelectorAll('.lang-node').forEach(btn => btn.classList.remove('active'));
     if (btnElement) btnElement.classList.add('active');
     localStorage.setItem('preferredLang', lang);
+    if (document.getElementById("athletesCards")) renderAthleteCards();
+    if (document.getElementById("profileContainer")) loadProfilePage();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    AOS.init({ duration: 1000, once: true });
-    const savedLang = localStorage.getItem('preferredLang') || 'uk';
-    const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === (savedLang === 'en' ? 'en' : savedLang.toLowerCase()));
+    if (typeof AOS !== "undefined") {
+        AOS.init({ duration: 1000, once: true });
+    }
+    const savedLang = normalizeLang(localStorage.getItem('preferredLang') || 'uk');
+    const langButtonText = savedLang === 'uk' ? 'ua' : savedLang.toLowerCase();
+    const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === langButtonText);
     changeLang(savedLang, btn);
 });
-window.scrollTo({
-  top: targetElement.offsetTop,
-  behavior: 'auto' 
-});
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  loop: true,
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+if (typeof targetElement !== "undefined" && targetElement) {
+    window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'auto'
+    });
+}
+
+if (typeof Swiper !== "undefined" && document.querySelector(".mySwiper")) {
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+}
 document.addEventListener("DOMContentLoaded", function () {
 
   const phone = document.getElementById("phone");
@@ -117,67 +157,324 @@ document.addEventListener("DOMContentLoaded", function () {
 // Додай більше інфо до кожного атлета (Біографія, Instagram тощо)
 const athletes = {
     dmytrii: {
-        name: "Dmytrii",
-        birth: "2009",
-        belt: "Green Belt",
-        year: "2017",
-        bio: "Dmytrii is a highly technical judoka who excels in throwing techniques. He has won multiple state championships and aspires to compete at the national level.",
-        insta: "https://instagram.com/judosambocenter",
-        image: "https://i.postimg.cc/rmqXkhRJ/2026-02-10-19-31-45.jpg"
+        year: "2024",
+        judoStart: "2017",
+        insta: "https://www.instagram.com/d1mon.official",
+        image: "https://i.postimg.cc/rmqXkhRJ/2026-02-10-19-31-45.jpg",
+        text: {
+            en: {
+                name: "Dmytrii Malishevskyi",
+                birth: "September 22, 2009",
+                belt: "Blue Belt",
+                shortBio: "Ukrainian judoka from Lviv competing in the -73kg weight class, with experience in Ukrainian and U.S. tournaments.",
+                bio: "Dmytrii Malishevskyi is a dedicated and competitive judoka originally from Lviv, Ukraine. He began practicing judo in 2017, building his character through discipline, respect, and determination. His early judo path started at Judo Gorilla in Lviv, where he trained with Andriy Sheremeta and Volodymyr Lipatov. Dmytrii competes in the -73kg weight class and continues to focus on stronger technique, sharper timing, and bigger tournament goals. His dream is to become a Master of Sport in judo through hard work, discipline, and support from his family.",
+                achievements: ["3rd Place - International Judo Tournament, Venice, Italy (2019)", "Champion - Lviv Regional Judo Championship, Ukraine (2024)", "1st Place - Staten Island Cup, New York, USA (2025)", "2nd Place - New York State Judo Championship, USA (2025)"]
+            },
+            uk: {
+                name: "Дмитрій Малішевський",
+                birth: "22 вересня 2009",
+                belt: "Синій пояс",
+                shortBio: "Український дзюдоїст зі Львова, який виступає у ваговій категорії -73kg та має досвід турнірів в Україні й США.",
+                bio: "Дмитрій Малішевський - цілеспрямований і конкурентний дзюдоїст родом зі Львова, Україна. Він почав займатися дзюдо у 2017 році, і цей спорт сформував у ньому дисципліну, повагу та наполегливість. Його ранній шлях у дзюдо почався в Judo Gorilla у Львові, де він тренувався з Андрієм Шереметою та Володимиром Ліпатовим. Дмитрій виступає у ваговій категорії -73kg і продовжує працювати над сильнішою технікою, точнішим таймінгом і більшими турнірними цілями. Його мрія - стати Майстром спорту з дзюдо завдяки праці, дисципліні та підтримці родини.",
+                achievements: ["3 місце - International Judo Tournament, Venice, Italy (2019)", "Чемпіон - Lviv Regional Judo Championship, Ukraine (2024)", "1 місце - Staten Island Cup, New York, USA (2025)", "2 місце - New York State Judo Championship, USA (2025)"]
+            },
+            ru: {
+                name: "Дмитрий Малишевский",
+                birth: "22 сентября 2009",
+                belt: "Синий пояс",
+                shortBio: "Украинский дзюдоист из Львова, выступающий в весовой категории -73kg, с опытом турниров в Украине и США.",
+                bio: "Дмитрий Малишевский - целеустремленный и конкурентный дзюдоист родом из Львова, Украина. Он начал заниматься дзюдо в 2017 году, и этот спорт сформировал в нем дисциплину, уважение и настойчивость. Его ранний путь в дзюдо начался в Judo Gorilla во Львове, где он тренировался с Андреем Шереметой и Владимиром Липатовым. Дмитрий выступает в весовой категории -73kg и продолжает работать над более сильной техникой, точным таймингом и большими турнирными целями. Его мечта - стать Мастером спорта по дзюдо благодаря труду, дисциплине и поддержке семьи.",
+                achievements: ["3 место - International Judo Tournament, Venice, Italy (2019)", "Чемпион - Lviv Regional Judo Championship, Ukraine (2024)", "1 место - Staten Island Cup, New York, USA (2025)", "2 место - New York State Judo Championship, USA (2025)"]
+            }
+        }
     },
+
     oleg: {
-        name: "Oleg",
-        birth: "2008",
-        belt: "Brown Belt",
-        year: "2026",
-        bio: "Oleg is known for his incredible strength and groundwork. He is one of the most senior students in the youth program and helps mentor junior athletes.",
+        year: "2017",
         insta: "https://instagram.com/judosambocenter",
-        image: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp"
+        image: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp",
+        text: {
+            en: {
+                name: "Oleg",
+                birth: "February 3, 2008",
+                belt: "Brown Belt",
+                shortBio: "A powerful competitor with excellent groundwork and leadership. Oleg is one of the senior athletes in the youth program.",
+                bio: "Oleg is one of the experienced athletes in the youth program. He started training at Judo Center in 2017 and quickly became known for his strength, focus, and excellent groundwork. Oleg is a serious competitor who also supports younger students during practice. His leadership and work ethic make him an important part of the team. He brings intensity to every practice and continues to develop both as an athlete and as a role model inside the club.",
+                achievements: ["USA national-level tournament medalist", "State champion in his age division", "Youth team leader and mentor for junior athletes"]
+            },
+            uk: {
+                name: "Олег",
+                birth: "3 лютого 2008",
+                belt: "Коричневий пояс",
+                shortBio: "Сильний спортсмен з відмінною боротьбою в партері та лідерськими якостями. Олег - один зі старших атлетів команди.",
+                bio: "Олег - один із досвідчених спортсменів молодіжної програми. Він почав тренуватися в Judo Center у 2017 році й швидко став відомим завдяки силі, концентрації та сильній боротьбі в партері. Олег серйозно ставиться до змагань і водночас допомагає молодшим спортсменам на тренуваннях. Його лідерство та працелюбність роблять його важливою частиною команди.",
+                achievements: ["Призер турніру національного рівня у США", "Чемпіон штату у своїй віковій категорії", "Лідер молодіжної команди та наставник для молодших спортсменів"]
+            },
+            ru: {
+                name: "Олег",
+                birth: "3 февраля 2008",
+                belt: "Коричневый пояс",
+                shortBio: "Сильный спортсмен с отличной борьбой в партере и лидерскими качествами. Олег - один из старших атлетов команды.",
+                bio: "Олег - один из опытных спортсменов молодежной программы. Он начал тренироваться в Judo Center в 2017 году и быстро стал известен благодаря силе, концентрации и сильной борьбе в партере. Олег серьезно относится к соревнованиям и одновременно помогает младшим спортсменам на тренировках. Его лидерство и трудолюбие делают его важной частью команды.",
+                achievements: ["Призер турнира национального уровня в США", "Чемпион штата в своей возрастной категории", "Лидер молодежной команды и наставник для младших спортсменов"]
+            }
+        }
     },
+
     marta: {
-        name: "Artur",
-        birth: "2010",
-        belt: "Blue Belt",
-        year: "2018",
-        bio: "Marta is a rising star in the girls' division. Since joining in 2020, she has shown rapid progress and an unbreakable competitive spirit.",
+        year: "2020",
         insta: "https://instagram.com/judosambocenter",
-        image: "https://i.postimg.cc/rwL2F1Bn/14-jpg.webp"
+        image: "https://i.postimg.cc/mZ1nKXr1/image.png",
+        text: {
+            en: {
+                name: "Steven Mackoul",
+                birth: "September 21, 2000",
+                belt: "Orange Belt",
+                shortBio: "A rising athlete with great focus and competitive spirit. Marta continues to grow quickly in the girls' division.",
+                bio: "Marta joined Judo Center in 2020 and has shown impressive progress from the very beginning. She is a hardworking athlete with a strong competitive spirit and a positive attitude on the mat. Marta continues to build her technique, confidence, and tournament experience. She is focused on improving her movement, gripping, and transitions from standing judo to groundwork. Her dedication makes her a great example of growth in the girls' division.",
+                achievements: ["Brooklyn Cup Silver Medal", "Multiple local tournament medals", "Recognized for discipline, courage, and fast improvement"]
+            },
+            uk: {
+                name: "Стівен Макул",
+                birth: "21 вересня 2000",
+                belt: "Помаранчевий Пояс",
+                shortBio: "Перспективна спортсменка з сильною концентрацією та бойовим характером. Марта швидко прогресує у дівочому дивізіоні.",
+                bio: "Марта приєдналася до Judo Center у 2020 році й з самого початку показала сильний прогрес. Вона працелюбна спортсменка з бойовим характером і позитивним ставленням до тренувань. Марта продовжує розвивати техніку, впевненість і турнірний досвід. Вона працює над рухом, захватами та переходами зі стійки в партер, що робить її чудовим прикладом росту в дівочому дивізіоні.",
+                achievements: ["Кубок Брукліна Срібна медаль", "Кілька медалей локальних турнірів", "Відзначається дисципліною, сміливістю та швидким прогресом"]
+            },
+            ru: {
+                name: "Стивен Макул",
+                birth: "21 сентября 2000",
+                belt: "Оранжевый пояс",
+                shortBio: "Перспективная спортсменка с сильной концентрацией и боевым характером. Марта быстро прогрессирует в девичьем дивизионе.",
+                bio: "Марта присоединилась к Judo Center в 2020 году и с самого начала показала сильный прогресс. Она трудолюбивая спортсменка с боевым характером и позитивным отношением к тренировкам. Марта продолжает развивать технику, уверенность и турнирный опыт. Она работает над движением, захватами и переходами из стойки в партер, что делает ее отличным примером роста в девичьем дивизионе.",
+                achievements: ["Кубок Бруклина Серебряная медаль", "Несколько медалей локальных турниров", "Отличается дисциплиной, смелостью и быстрым прогрессом"]
+            }
+        }
+    },
+
+    artur: {
+        year: "2015",
+        insta: "https://www.instagram.com/lil_russiankid/",
+        image: "https://i.postimg.cc/FsLz8Zj2/IMG-7042.jpg.webp",
+        text: {
+            en: {
+                name: "Arthur Troshin",
+                birth: "2010",
+                belt: "Blue Belt",
+                shortBio: "Artur is a focused young judoka with strong discipline and steady progress in training.",
+                bio: "Artur is a focused young judoka who continues to build confidence, discipline, and clean basic technique. He works hard during practice and is developing a strong foundation for future competitions.",
+                achievements: ["New York State Championship 4 times winner", "New Jersey State Championship winner"]
+            },
+            uk: {
+                name: "Артур",
+                birth: "2010",
+                belt: "Синій пояс",
+                shortBio: "Артур - зосереджений юний дзюдоїст із хорошою дисципліною та стабільним прогресом.",
+                bio: "Артур - зосереджений юний дзюдоїст, який розвиває впевненість, дисципліну та чисту базову техніку. Він старанно працює на тренуваннях і формує сильну основу для майбутніх змагань.",
+                achievements: ["4-разовий переможець New York State Championship", "Переможець New Jersey State Championship"]
+            },
+            ru: {
+                name: "Артур",
+                birth: "2010",
+                belt: "Синий пояс",
+                shortBio: "Артур - сосредоточенный юный дзюдоист с хорошей дисциплиной и стабильным прогрессом.",
+                bio: "Артур - сосредоточенный юный дзюдоист, который развивает уверенность, дисциплину и чистую базовую технику. Он старательно работает на тренировках и формирует сильную основу для будущих соревнований.",
+                achievements: ["4-кратный победитель New York State Championship", "Победитель New Jersey State Championship"]
+            }
+        }
+    },
+
+    mark: {
+        year: "2009",
+        insta: "https://instagram.com/judosambocenter",
+        image: "https://i.postimg.cc/pdc2T9YY/7879-jpg.webp",
+        text: {
+            en: {
+                name: "Mark Kilshtok",
+                birth: "March 28, 2001",
+                belt: "Orange Belt",
+                shortBio: "Mark brings energy to every practice and keeps improving his movement, grips, and confidence.",
+                bio: "Mark is an energetic judoka who enjoys learning new techniques and challenging himself on the mat. His training focuses on movement, grip control, balance, and confidence in competition situations.",
+                achievements: ["Junior Olympic nationals champion", "Big Apple Classic Champion"]
+            },
+            uk: {
+                name: "Марк Кілшток",
+                birth: "28 Березня, 2001",
+                belt: "Помаранчевий пояс",
+                shortBio: "Марк приносить енергію на кожне тренування і покращує рух, захвати та впевненість.",
+                bio: "Марк - енергійний дзюдоїст, якому подобається вивчати нові техніки та випробовувати себе на татамі. Його тренування зосереджені на русі, контролі захватів, балансі та впевненості у змагальних ситуаціях.",
+                achievements: ["Чемпіон юніорських Олімпійських ігор", "Чемпіон Big Apple Classic"]
+            },
+            ru: {
+                name: "Марк Кильшток",
+                birth: "28 Марта, 2001",
+                belt: "Оранжевый пояс",
+                shortBio: "Марк приносит энергию на каждую тренировку и улучшает движение, захваты и уверенность.",
+                bio: "Марк - энергичный дзюдоист, которому нравится изучать новые техники и проверять себя на татами. Его тренировки сосредоточены на движении, контроле захватов, балансе и уверенности в соревновательных ситуациях.",
+                achievements: ["Чемпион национального турнира Юношеские Олимпийские игры", "Чемпион турнира Big Apple Classic"]
+            }
+        }
+    },
+
+    prydanik: {
+        year: "2025",
+        insta: "https://instagram.com/judosambocenter",
+        image: "https://i.postimg.cc/1zdQSksL/photo-2023-11-20-153-jpeg.jpg",
+        text: {
+            en: {
+                name: "Daniel Koimuratov",
+                birth: "2014",
+                belt: "Orange Belt",
+                shortBio: "Prydanik is a determined competitor with strong effort, focus, and a serious training attitude.",
+                bio: "Prydanik is a determined athlete who approaches training with focus and seriousness. He continues to develop stronger throws, better transitions, and the confidence needed for competitive judo.",
+                achievements: ["Competitive youth athlete", "Strong progress in standing technique", "Known for focus and determination"]
+            },
+            uk: {
+                name: "Даніель Коймуратов",
+                birth: "2014",
+                belt: "Помаранчевий Пояс",
+                shortBio: "Приданік - наполегливий спортсмен із сильним фокусом, старанністю та серйозним ставленням до тренувань.",
+                bio: "Приданік - наполегливий спортсмен, який підходить до тренувань з фокусом і серйозністю. Він продовжує розвивати сильніші кидки, кращі переходи та впевненість, потрібну для змагального дзюдо.",
+                achievements: ["Змагальний спортсмен молодіжної команди", "Сильний прогрес у техніці стійки", "Відомий фокусом і наполегливістю"]
+            },
+            ru: {
+                name: "Даниэль Коймуратов",
+                birth: "2014",
+                belt: "Оранжевый Пояс",
+                shortBio: "Приданик - настойчивый спортсмен с сильным фокусом, старанием и серьезным отношением к тренировкам.",
+                bio: "Приданик - настойчивый спортсмен, который подходит к тренировкам с фокусом и серьезностью. Он продолжает развивать более сильные броски, лучшие переходы и уверенность, нужную для соревновательного дзюдо.",
+                achievements: ["Соревнующийся спортсмен молодежной команды", "Сильный прогресс в технике стойки", "Известен фокусом и настойчивостью"]
+            }
+        }
     }
 };
 
-// --- ЛОГІКА СТОРІНКИ ПРОФІЛЮ ---
-document.addEventListener("DOMContentLoaded", function() {
-    // Перевіряємо, чи ми на сторінці профілю (чи є там блок profileContainer)
-    if (document.getElementById("profileContainer")) {
-        loadProfilePage();
-    }
-});
+function getTrainingExperience(startYear) {
+    const years = new Date().getFullYear() - Number(startYear);
+    if (!Number.isFinite(years) || years <= 0) return getTranslation("started_in") + " " + startYear;
+    return years + getTranslation("years_suffix");
+}
+
+function getAthleteText(athlete) {
+    return athlete.text[currentLang] || athlete.text.en;
+}
+
+function renderAthleteCards() {
+    const cardsContainer = document.getElementById("athletesCards");
+
+    if (!cardsContainer) return;
+
+    cardsContainer.innerHTML = "";
+
+    Object.entries(athletes).forEach(([id, athlete], index) => {
+        const athleteText = getAthleteText(athlete);
+        const card = document.createElement("div");
+        card.className = "card";
+        card.setAttribute("data-aos", "fade-up");
+        card.setAttribute("data-aos-delay", index * 100);
+
+        card.innerHTML = `
+            <img src="${athlete.image}" alt="${athleteText.name}">
+            <div class="card-info">
+                <h3>${athleteText.name}</h3>
+                <div class="athlete-meta">
+                    <span>${athleteText.belt}</span>
+                    <span>${getTranslation("since_label")} ${athlete.year}</span>
+                </div>
+                <p class="athlete-bio">${athleteText.shortBio}</p>
+                <div class="card-actions">
+                    <button class="view-btn" onclick="window.location.href='profile.html?id=${id}'">
+                        ${getTranslation("view_profile")}
+                    </button>
+                    <a class="mini-insta-link" href="${athlete.insta}" target="_blank" aria-label="${athleteText.name} Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+
+        cardsContainer.appendChild(card);
+    });
+}
+
+function createAthleteCard(id, athlete, compact = false) {
+    const athleteText = getAthleteText(athlete);
+    const card = document.createElement("div");
+    card.className = compact ? "card related-card" : "card";
+    card.setAttribute("data-aos", "fade-up");
+
+    card.innerHTML = `
+        <img src="${athlete.image}" alt="${athleteText.name}">
+        <div class="card-info">
+            <h3>${athleteText.name}</h3>
+            <div class="athlete-meta">
+                <span>${athleteText.belt}</span>
+                <span>${getTranslation("since_label")} ${athlete.year}</span>
+            </div>
+            <p class="athlete-bio">${athleteText.shortBio}</p>
+            <div class="card-actions">
+                <button class="view-btn" onclick="window.location.href='profile.html?id=${id}'">
+                    ${getTranslation("view_profile")}
+                </button>
+                <a class="mini-insta-link" href="${athlete.insta}" target="_blank" aria-label="${athleteText.name} Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    `;
+
+    return card;
+}
+
+function renderRelatedAthletes(currentId) {
+    const relatedContainer = document.getElementById("relatedAthletesCards");
+    if (!relatedContainer) return;
+
+    relatedContainer.innerHTML = "";
+
+    const preferredRelated = currentId === "dmytrii"
+        ? ["artur", "mark", "prydanik"]
+        : Object.keys(athletes).filter(id => id !== currentId).slice(0, 3);
+
+    preferredRelated
+        .filter(id => athletes[id])
+        .filter(id => id !== currentId)
+        .forEach(id => {
+            relatedContainer.appendChild(createAthleteCard(id, athletes[id], true));
+        });
+}
 
 function loadProfilePage() {
-    // 1. Беремо ID з посилання (наприклад: profile.html?id=marta)
     const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
-
-    // 2. Шукаємо атлета в нашій базі (об'єкт athletes)
+    const id = urlParams.get("id");
     const p = athletes[id];
+    const pText = p ? getAthleteText(p) : null;
 
-    // 3. Якщо ID неправильний або його немає
     if (!p) {
-        document.getElementById("profileContainer").innerHTML = "<h2 style='padding: 30px;'>Athlete not found! Please go back.</h2>";
+        document.getElementById("profileContainer").innerHTML = "<h2>Athlete not found! Please go back.</h2>";
         return;
     }
 
-    // 4. Заповнюємо дані!
-    document.title = p.name + " | Profile"; 
-    document.getElementById("p_name").innerText = p.name;
-    document.getElementById("p_birth").innerText = p.birth;
-    document.getElementById("p_belt").innerText = p.belt;
+    document.title = pText.name + " | Profile";
+    document.getElementById("p_name").innerText = pText.name;
+    document.getElementById("p_birth").innerText = pText.birth;
+    document.getElementById("p_belt").innerText = pText.belt;
     document.getElementById("p_year").innerText = p.year;
-    document.getElementById("p_bio").innerText = p.bio;
+    document.getElementById("p_training").innerText = getTrainingExperience(p.judoStart || p.year);
+    document.getElementById("p_bio").innerText = pText.bio;
     document.getElementById("p_image").src = p.image;
-    
-    const instaElement = document.getElementById("p_insta");
-    if (instaElement && p.insta) {
-        instaElement.href = p.insta;
+    document.getElementById("p_insta").href = p.insta;
+
+    const achievementsList = document.getElementById("p_achievements");
+    if (achievementsList) {
+        achievementsList.innerHTML = "";
+        pText.achievements.forEach(achievement => {
+            const item = document.createElement("li");
+            item.innerText = achievement;
+            achievementsList.appendChild(item);
+        });
     }
+
+    renderRelatedAthletes(id);
 }
