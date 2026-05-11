@@ -198,25 +198,25 @@ const athletes = {
                 name: "Oleg",
                 birth: "February 3, 2008",
                 belt: "Brown Belt",
-                shortBio: "A powerful competitor with excellent groundwork and leadership. Oleg is one of the senior athletes in the youth program.",
-                bio: "Oleg is one of the experienced athletes in the youth program. He started training at Judo Center in 2017 and quickly became known for his strength, focus, and excellent groundwork. Oleg is a serious competitor who also supports younger students during practice. His leadership and work ethic make him an important part of the team. He brings intensity to every practice and continues to develop both as an athlete and as a role model inside the club.",
-                achievements: ["USA national-level tournament medalist", "State champion in his age division", "Youth team leader and mentor for junior athletes"]
+                shortBio: "",
+                bio: "",
+                achievements: [""]
             },
             uk: {
                 name: "Олег",
                 birth: "3 лютого 2008",
                 belt: "Коричневий пояс",
-                shortBio: "Сильний спортсмен з відмінною боротьбою в партері та лідерськими якостями. Олег - один зі старших атлетів команди.",
-                bio: "Олег - один із досвідчених спортсменів молодіжної програми. Він почав тренуватися в Judo Center у 2017 році й швидко став відомим завдяки силі, концентрації та сильній боротьбі в партері. Олег серйозно ставиться до змагань і водночас допомагає молодшим спортсменам на тренуваннях. Його лідерство та працелюбність роблять його важливою частиною команди.",
-                achievements: ["Призер турніру національного рівня у США", "Чемпіон штату у своїй віковій категорії", "Лідер молодіжної команди та наставник для молодших спортсменів"]
+                shortBio: "",
+                bio: "",
+                achievements: [""]
             },
             ru: {
                 name: "Олег",
                 birth: "3 февраля 2008",
                 belt: "Коричневый пояс",
-                shortBio: "Сильный спортсмен с отличной борьбой в партере и лидерскими качествами. Олег - один из старших атлетов команды.",
-                bio: "Олег - один из опытных спортсменов молодежной программы. Он начал тренироваться в Judo Center в 2017 году и быстро стал известен благодаря силе, концентрации и сильной борьбе в партере. Олег серьезно относится к соревнованиям и одновременно помогает младшим спортсменам на тренировках. Его лидерство и трудолюбие делают его важной частью команды.",
-                achievements: ["Призер турнира национального уровня в США", "Чемпион штата в своей возрастной категории", "Лидер молодежной команды и наставник для младших спортсменов"]
+                shortBio: ".",
+                bio: "",
+                achievements: [""]
             }
         }
     },
@@ -230,24 +230,24 @@ const athletes = {
                 name: "Steven Mackoul",
                 birth: "September 21, 2000",
                 belt: "Orange Belt",
-                shortBio: "A rising athlete with great focus and competitive spirit. Marta continues to grow quickly in the girls' division.",
-                bio: "Marta joined Judo Center in 2020 and has shown impressive progress from the very beginning. She is a hardworking athlete with a strong competitive spirit and a positive attitude on the mat. Marta continues to build her technique, confidence, and tournament experience. She is focused on improving her movement, gripping, and transitions from standing judo to groundwork. Her dedication makes her a great example of growth in the girls' division.",
+                shortBio: "",
+                bio: "",
                 achievements: ["Brooklyn Cup Silver Medal", "Multiple local tournament medals", "Recognized for discipline, courage, and fast improvement"]
             },
             uk: {
                 name: "Стівен Макул",
                 birth: "21 вересня 2000",
                 belt: "Помаранчевий Пояс",
-                shortBio: "Перспективна спортсменка з сильною концентрацією та бойовим характером. Марта швидко прогресує у дівочому дивізіоні.",
-                bio: "Марта приєдналася до Judo Center у 2020 році й з самого початку показала сильний прогрес. Вона працелюбна спортсменка з бойовим характером і позитивним ставленням до тренувань. Марта продовжує розвивати техніку, впевненість і турнірний досвід. Вона працює над рухом, захватами та переходами зі стійки в партер, що робить її чудовим прикладом росту в дівочому дивізіоні.",
+                shortBio: "",
+                bio: "",
                 achievements: ["Кубок Брукліна Срібна медаль", "Кілька медалей локальних турнірів", "Відзначається дисципліною, сміливістю та швидким прогресом"]
             },
             ru: {
                 name: "Стивен Макул",
                 birth: "21 сентября 2000",
                 belt: "Оранжевый пояс",
-                shortBio: "Перспективная спортсменка с сильной концентрацией и боевым характером. Марта быстро прогрессирует в девичьем дивизионе.",
-                bio: "Марта присоединилась к Judo Center в 2020 году и с самого начала показала сильный прогресс. Она трудолюбивая спортсменка с боевым характером и позитивным отношением к тренировкам. Марта продолжает развивать технику, уверенность и турнирный опыт. Она работает над движением, захватами и переходами из стойки в партер, что делает ее отличным примером роста в девичьем дивизионе.",
+                shortBio: "",
+                bio: "",
                 achievements: ["Кубок Бруклина Серебряная медаль", "Несколько медалей локальных турниров", "Отличается дисциплиной, смелостью и быстрым прогрессом"]
             }
         }
@@ -326,24 +326,24 @@ const athletes = {
                 name: "Daniel Koimuratov",
                 birth: "2014",
                 belt: "Orange Belt",
-                shortBio: "Prydanik is a determined competitor with strong effort, focus, and a serious training attitude.",
-                bio: "Prydanik is a determined athlete who approaches training with focus and seriousness. He continues to develop stronger throws, better transitions, and the confidence needed for competitive judo.",
+                shortBio: "Daniel is a determined competitor with strong effort, focus, and a serious training attitude.",
+                bio: "Daniel is a determined athlete who approaches training with focus and seriousness. He continues to develop stronger throws, better transitions, and the confidence needed for competitive judo.",
                 achievements: ["Competitive youth athlete", "Strong progress in standing technique", "Known for focus and determination"]
             },
             uk: {
                 name: "Даніель Коймуратов",
                 birth: "2014",
                 belt: "Помаранчевий Пояс",
-                shortBio: "Приданік - наполегливий спортсмен із сильним фокусом, старанністю та серйозним ставленням до тренувань.",
-                bio: "Приданік - наполегливий спортсмен, який підходить до тренувань з фокусом і серйозністю. Він продовжує розвивати сильніші кидки, кращі переходи та впевненість, потрібну для змагального дзюдо.",
+                shortBio: "Даніель - наполегливий спортсмен із сильним фокусом, старанністю та серйозним ставленням до тренувань.",
+                bio: "Даніель - наполегливий спортсмен, який підходить до тренувань з фокусом і серйозністю. Він продовжує розвивати сильніші кидки, кращі переходи та впевненість, потрібну для змагального дзюдо.",
                 achievements: ["Змагальний спортсмен молодіжної команди", "Сильний прогрес у техніці стійки", "Відомий фокусом і наполегливістю"]
             },
             ru: {
                 name: "Даниэль Коймуратов",
                 birth: "2014",
                 belt: "Оранжевый Пояс",
-                shortBio: "Приданик - настойчивый спортсмен с сильным фокусом, старанием и серьезным отношением к тренировкам.",
-                bio: "Приданик - настойчивый спортсмен, который подходит к тренировкам с фокусом и серьезностью. Он продолжает развивать более сильные броски, лучшие переходы и уверенность, нужную для соревновательного дзюдо.",
+                shortBio: "Даниэль - настойчивый спортсмен с сильным фокусом, старанием и серьезным отношением к тренировкам.",
+                bio: "Даниэль - настойчивый спортсмен, который подходит к тренировкам с фокусом и серьезностью. Он продолжает развивать более сильные броски, лучшие переходы и уверенность, нужную для соревновательного дзюдо.",
                 achievements: ["Соревнующийся спортсмен молодежной команды", "Сильный прогресс в технике стойки", "Известен фокусом и настойчивостью"]
             }
         }
