@@ -267,7 +267,7 @@ const athletes = {
                 achievements: ["New York State Championship 4 times winner", "New Jersey State Championship winner"]
             },
             uk: {
-                name: "Артур",
+                name: "Артур Трошин",
                 birth: "2010",
                 belt: "Синій пояс",
                 shortBio: "Артур - зосереджений юний дзюдоїст із хорошою дисципліною та стабільним прогресом.",
@@ -275,7 +275,7 @@ const athletes = {
                 achievements: ["4-разовий переможець New York State Championship", "Переможець New Jersey State Championship"]
             },
             ru: {
-                name: "Артур",
+                name: "Артур Трошин",
                 birth: "2010",
                 belt: "Синий пояс",
                 shortBio: "Артур - сосредоточенный юный дзюдоист с хорошей дисциплиной и стабильным прогрессом.",
