@@ -214,7 +214,7 @@ const athletes = {
                 name: "Олег",
                 birth: "3 февраля 2008",
                 belt: "Коричневый пояс",
-                shortBio: ".",
+                shortBio: "",
                 bio: "",
                 achievements: [""]
             }
