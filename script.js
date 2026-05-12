@@ -199,7 +199,7 @@ const athletes = {
                 birth: "November 21, 2008",
                 belt: "Green Belt",
                 shortBio: "Born in Fort Pierce Florida",
-                bio: "He born in Fort Pierce Florida USA, he started judo on 2018 first champioships he lose but he motivation to win next time                            ",
+                bio: "He born in Fort Pierce Florida USA, he started judo on 2018 first champioships he lose but he motivation to win next time, Daniel not a simple kid he have a strong struggle ",
                 achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals" ]
             },
             uk: {
