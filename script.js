@@ -190,7 +190,7 @@ const athletes = {
     },
 
     danila: {
-        year: "2017",
+        year: "2025",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp",
         text: {
@@ -199,7 +199,7 @@ const athletes = {
                 birth: "November 21, 2008",
                 belt: "Green Belt",
                 shortBio: "Born in Fort Pierce Florida",
-                bio: "Born in Fort Pierce Florida",
+                bio: "He born in Fort Pierce Florida USA, he started judo on 2018 first champioships he lose but he motivation to win next time",
                 achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals" ]
             },
             uk: {
@@ -207,7 +207,7 @@ const athletes = {
                 birth: "21 Листопада, 2008 ",
                 belt: "Зелений пояс",
                 shortBio: "Народився у Форт-Пірсі, штат Флорида",
-                bio: "Народився у Форт-Пірсі, штат Флорида",
+                bio: "НВін народився у Форт-Пірсі, штат Флорида, США, почав займатися дзюдо на першому чемпіонаті 2018 року, який програв, але має мотивацію перемогти наступного разу.",
                 achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals"]
             },
             ru: {
@@ -215,7 +215,7 @@ const athletes = {
                 birth: "21 Ноября, 2008",
                 belt: "Зеленый пояс",
                 shortBio: "Родился в Форт-Пирсе, Флорида.",
-                bio: "Родился в Форт-Пирсе, Флорида.",
+                bio: "Он родился в Форт-Пирсе, штат Флорида, США. Начал заниматься дзюдо в 2018 году. На первом чемпионате проиграл, но полон решимости победить в следующий раз.",
                 achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals"]
             }
         }
