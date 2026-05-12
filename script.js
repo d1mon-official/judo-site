@@ -200,7 +200,7 @@ const athletes = {
                 belt: "Green Belt",
                 shortBio: "Daniel Agranovskiy is an American judoka from Fort Pierce, Florida, with experience in U.S. regional and national tournaments.",
                 bio: "Daniel Agranovskiy was born in Fort Pierce, Florida, USA, and began practicing judo in 2018. In his early competitions, he did not achieve immediate success, but those experiences helped him build motivation and improve his skills over time. Through consistent training, Daniel developed stronger technique, discipline, and confidence on the mat. He continued to progress in the sport, learning from each match and focusing on steady improvement. His dedication has led to competitive success at regional and national events, showing his growth as a young judoka and his commitment to continuing to improve. ",
-                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals" ]
+                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in Summer Nationals 2019" ]
             },
             uk: {
                 name: "Даніель Аграновський",
@@ -208,7 +208,7 @@ const athletes = {
                 belt: "Зелений пояс",
                 shortBio: "Даніель Аграновський американський дзюдоїст із Форт-Пірса, штат Флорида, який має досвід участі в регіональних і національних турнірах США.",
                 bio: "Даніель Аграновський народився у Форт-Пірсі, штат Флорида, США, і розпочав заняття дзюдо у 2018 році. На початку своєї спортивної кар’єри він не одразу досяг високих результатів у змаганнях, але ці перші досвіди стали для нього важливою мотивацією для подальшого розвитку. Завдяки регулярним тренуванням Даніель поступово покращував техніку, дисципліну та впевненість на татамі. Він робив висновки з кожного поєдинку та продовжував працювати над своїми навичками. Його наполегливість і відданість спорту привели до призових місць на регіональних і національних турнірах, що підкреслює його прогрес як молодого дзюдоїста.",
-                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals"]
+                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in Summer Nationals 2019"]
             },
             ru: {
                 name: "Даниэль Аграновский",
@@ -216,7 +216,7 @@ const athletes = {
                 belt: "Зеленый пояс",
                 shortBio: "Даниэль Аграновский американский дзюдоист из Форт-Пирса, штат Флорида, с опытом участия в региональных и национальных турнирах США.",
                 bio: "Даниэль Аграновский родился в Форт-Пирсе, штат Флорида, США, и начал заниматься дзюдо в 2018 году. В начале своей спортивной карьеры он не сразу добился высоких результатов на соревнованиях, однако эти первые неудачи стали для него важной мотивацией для дальнейшего развития. Благодаря регулярным тренировкам Даниэль постепенно улучшал технику, дисциплину и уверенность на татами. Он делал выводы после каждого поединка и продолжал работать над своими навыками. Его упорство и преданность спорту привели к призовым местам на региональных и национальных турнирах, что подчеркивает его рост как молодого дзюдоиста.",
-                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals"]
+                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in Summer Nationals 2019"]
             }
         }
     },
