@@ -189,34 +189,34 @@ const athletes = {
         }
     },
 
-    oleg: {
+    danila: {
         year: "2017",
         insta: "https://instagram.com/judosambocenter",
         image: "https://i.postimg.cc/2jb51xt6/43214-jpg.webp",
         text: {
             en: {
-                name: "Oleg",
-                birth: "February 3, 2008",
-                belt: "Brown Belt",
-                shortBio: "",
-                bio: "",
-                achievements: [""]
+                name: "Daniel Agranovskiy",
+                birth: "November 21, 2008",
+                belt: "Green Belt",
+                shortBio: "Born in Fort Pierce Florida",
+                bio: "Born in Fort Pierce Florida",
+                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals" ]
             },
             uk: {
-                name: "Олег",
-                birth: "3 лютого 2008",
-                belt: "Коричневий пояс",
-                shortBio: "",
-                bio: "",
-                achievements: [""]
+                name: "Даніель Аграновський",
+                birth: "21 Листопада, 2008 ",
+                belt: "Зелений пояс",
+                shortBio: "Народився у Форт-Пірсі, штат Флорида",
+                bio: "Народився у Форт-Пірсі, штат Флорида",
+                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals"]
             },
             ru: {
-                name: "Олег",
-                birth: "3 февраля 2008",
-                belt: "Коричневый пояс",
-                shortBio: "",
-                bio: "",
-                achievements: [""]
+                name: "Даниэль Аграновский",
+                birth: "21 Ноября, 2008",
+                belt: "Зеленый пояс",
+                shortBio: "Родился в Форт-Пирсе, Флорида.",
+                bio: "Родился в Форт-Пирсе, Флорида.",
+                achievements: ["1st place in Big Apple Cup", "2nd place in East Coast Championships", " 2nd place in 2019 Summer Nationals"]
             }
         }
     },
