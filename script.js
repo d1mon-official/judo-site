@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Додай більше інфо до кожного атлета (Біографія, Instagram тощо)
 const athletes = {
-    dmytrii: {
+    dmytrii_malishevskyi: {
         year: "2024",
         judoStart: "2017",
         insta: "https://www.instagram.com/d1mon.official",
