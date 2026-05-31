@@ -515,7 +515,6 @@ body {
 /* --- FITNESS WIDE CARD --- */
 .fitness-wide-card { 
     background: linear-gradient(135deg, #fffdf0 0%, #fff6c9 100%); 
-    border: 3px solid var(--gold); 
     border-radius: 20px; 
     padding: 40px; 
     margin-top: 40px;
