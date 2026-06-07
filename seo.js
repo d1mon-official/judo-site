@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    const SITE_ORIGIN = "https://judocenterny.com";
+    const SITE_ORIGIN = "https://judocenternewyork.com";
     const SITE_NAME = "Judo Center New York";
     const DEFAULT_DESCRIPTION = "Judo Center New York offers professional judo training for kids, teens, and adults in Staten Island and Brooklyn.";
 
