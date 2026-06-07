@@ -384,7 +384,7 @@ function renderAthleteCards() {
                 </div>
                 <p class="athlete-bio">${athleteText.shortBio}</p>
                 <div class="card-actions">
-                    <button class="view-btn" onclick="window.location.href='profile.html?id=${id}'">
+                    <button class="view-btn" onclick="window.location.href='/profile?id=${id}'">
                         ${getTranslation("view_profile")}
                     </button>
                     <a class="mini-insta-link" href="${athlete.insta}" target="_blank" aria-label="${athleteText.name} Instagram">
@@ -414,7 +414,7 @@ function createAthleteCard(id, athlete, compact = false) {
             </div>
             <p class="athlete-bio">${athleteText.shortBio}</p>
             <div class="card-actions">
-                <button class="view-btn" onclick="window.location.href='profile.html?id=${id}'">
+                <button class="view-btn" onclick="window.location.href='/profile?id=${id}'">
                     ${getTranslation("view_profile")}
                 </button>
                 <a class="mini-insta-link" href="${athlete.insta}" target="_blank" aria-label="${athleteText.name} Instagram">
@@ -433,7 +433,7 @@ function renderRelatedAthletes(currentId) {
 
     relatedContainer.innerHTML = "";
 
-    const preferredRelated = currentId === "dmytrii"
+    const preferredRelated = currentId === "dmytrii_malishevskyi"
         ? ["artur", "mark", "prydanik"]
         : Object.keys(athletes).filter(id => id !== currentId).slice(0, 3);
 
@@ -456,7 +456,7 @@ function loadProfilePage() {
         return;
     }
 
-    document.title = pText.name + " | Profile";
+    document.title = pText.name + " | Judo Center New York";
     document.getElementById("p_name").innerText = pText.name;
     document.getElementById("p_birth").innerText = pText.birth;
     document.getElementById("p_belt").innerText = pText.belt;
