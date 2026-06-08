@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://judocenternewyork.com/sitemap.xml
