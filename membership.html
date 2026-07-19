@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete the Judo & Wrestling Center membership application for judo and wrestling programs in New York.">
+    <link rel="canonical" href="https://judocenterny.com/membership">
+    <title>Membership Application | Judo & Wrestling Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/jq4s9dLf/091.jpg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="membership-page">
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="/" class="logo" aria-label="Judo Center New York home">
+                <img src="https://i.postimg.cc/8cz2HLvT/photo_2025_12_23_11_22_05_removebg_preview.png" alt="" class="logo-img">
+            </a>
+            <div class="header-right">
+                <div class="lang-selector">
+                    <button class="lang-node" onclick="changeLang('uk', this)">UA</button>
+                    <button class="lang-node active" onclick="changeLang('en', this)">EN</button>
+                    <button class="lang-node" onclick="changeLang('ru', this)">RU</button>
+                </div>
+                <a href="#membershipForm" class="btn-header-join" data-key="btn_join">Join Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="membership-main">
+        <section class="membership-hero">
+            <div class="membership-hero-overlay"></div>
+            <div class="container membership-hero-inner" data-aos="fade-up">
+                <span class="membership-kicker" data-key="membership_kicker">Judo &amp; Wrestling Center</span>
+                <h1 data-key="membership_title">Membership Application</h1>
+                <p data-key="membership_intro">Fill out the form below and our team will contact you to confirm the next step.</p>
+            </div>
+        </section>
+
+        <section class="membership-section">
+            <div class="container">
+                <form class="membership-form" id="membershipForm" action="https://formspree.io/f/xeejnnyd" method="POST" data-aos="fade-up">
+                    <input type="hidden" name="_subject" value="New Membership Application - Judo & Wrestling Center">
+
+                    <div class="form-section">
+                        <h2 data-key="membership_applicant_info">Applicant Information</h2>
+                        <fieldset class="choice-group age-choice">
+                            <legend class="required-label" data-key="membership_age_question">Are you 18 or older?</legend>
+                            <label><input type="radio" name="is_18_or_older" value="Yes" required> <span data-key="membership_yes">Yes</span></label>
+                            <label><input type="radio" name="is_18_or_older" value="No"> <span data-key="membership_no">No</span></label>
+                        </fieldset>
+                        <div class="form-grid">
+                            <label>
+                                <span class="required-label" data-key="membership_full_name">Full Name</span>
+                                <input type="text" name="applicant_full_name" required>
+                            </label>
+                            <label>
+                                <span class="required-label" data-key="membership_dob">Date of Birth</span>
+                                <input type="date" name="date_of_birth" required>
+                            </label>
+                            <label>
+                                <span class="required-label" data-key="membership_gender">Gender</span>
+                                <input type="text" name="gender" required>
+                            </label>
+                            <label>
+                                <span class="required-label" data-key="membership_phone">Phone</span>
+                                <input type="tel" name="applicant_phone" placeholder="+1" required data-phone-format>
+                            </label>
+                            <label class="full-width">
+                                <span class="required-label" data-key="membership_address">Address</span>
+                                <input type="text" name="address" required>
+                            </label>
+                            <label class="full-width">
+                                <span class="required-label" data-key="membership_email">Email</span>
+                                <input type="email" name="email" required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section guardian-section" id="guardianSection" hidden>
+                        <h2><span data-key="membership_guardian_info">Parent/Guardian Information</span> <span data-key="membership_under_18">(if applicant is under 18)</span></h2>
+                        <div class="form-grid">
+                            <label>
+                                <span class="guardian-required-label" data-key="membership_guardian_name">Parent/Guardian Name</span>
+                                <input type="text" name="guardian_name" data-guardian-required>
+                            </label>
+                            <label>
+                                <span class="guardian-required-label" data-key="membership_phone">Phone</span>
+                                <input type="tel" name="guardian_phone" placeholder="+1" data-guardian-required data-phone-format>
+                            </label>
+                            <label class="full-width">
+                                <span class="guardian-required-label" data-key="membership_email">Email</span>
+                                <input type="email" name="guardian_email" data-guardian-required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 data-key="membership_emergency_contact">Emergency Contact</h2>
+                        <div class="form-grid">
+                            <label>
+                                <span class="required-label" data-key="membership_name">Name</span>
+                                <input type="text" name="emergency_name" required>
+                            </label>
+                            <label>
+                                <span class="required-label" data-key="membership_relationship">Relationship</span>
+                                <input type="text" name="emergency_relationship" required>
+                            </label>
+                            <label class="full-width">
+                                <span class="required-label" data-key="membership_phone">Phone</span>
+                                <input type="tel" name="emergency_phone" placeholder="+1" required data-phone-format>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 data-key="membership_medical_info">Medical Information</h2>
+                        <div class="form-grid">
+                            <label class="full-width">
+                                <span data-key="membership_medical_conditions">Any medical conditions or allergies</span>
+                                <textarea name="medical_conditions" rows="4"></textarea>
+                            </label>
+                            <label class="full-width">
+                                <span data-key="membership_medications">Current medications</span>
+                                <textarea name="current_medications" rows="4"></textarea>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 data-key="membership_experience">Experience</h2>
+                        <fieldset class="choice-group">
+                            <legend class="required-label" data-key="membership_trained_before">Have you trained in Judo or Wrestling before?</legend>
+                            <label><input type="radio" name="trained_before" value="Yes" required> <span data-key="membership_yes">Yes</span></label>
+                            <label><input type="radio" name="trained_before" value="No"> <span data-key="membership_no">No</span></label>
+                        </fieldset>
+                        <label class="stacked-field experience-rank-field" id="experienceRankField" hidden>
+                            <span data-key="membership_experience_rank">If yes, describe your experience and rank</span>
+                            <textarea name="experience_and_rank" rows="4" disabled></textarea>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 data-key="membership_membership">Membership</h2>
+                        <fieldset class="choice-group">
+                            <legend class="required-label" data-key="membership_program">Program</legend>
+                            <label><input type="radio" name="program" value="Judo" required> <span data-key="membership_program_judo">Judo</span></label>
+                            <label><input type="radio" name="program" value="Wrestling"> <span data-key="membership_program_wrestling">Wrestling</span></label>
+                            <label><input type="radio" name="program" value="Both"> <span data-key="membership_program_both">Both</span></label>
+                        </fieldset>
+                        <label class="stacked-field">
+                            <span data-key="membership_training_days">Preferred Training Days</span>
+                            <input type="text" name="preferred_training_days">
+                        </label>
+                    </div>
+
+                    <div class="agreement-box">
+                        <h2 data-key="membership_agreement">Agreement</h2>
+                        <p data-key="membership_agreement_text">I understand that martial arts training involves physical activity and accept the risks associated with participation. I agree to follow all rules and instructions of the Judo &amp; Wrestling Center.</p>
+                        <label class="agreement-check">
+                            <input type="checkbox" name="agreement_accepted" value="Yes" required>
+                            <span class="required-label" data-key="membership_agree_check">I have read and agree to the statement above.</span>
+                        </label>
+                    </div>
+
+                    <div class="form-section signatures-section">
+                        <h2 data-key="membership_signatures">Signatures</h2>
+                        <div class="form-grid">
+                            <label>
+                                <span class="required-label" data-key="membership_applicant_signature">Applicant Signature</span>
+                                <input type="text" name="applicant_signature" required>
+                            </label>
+                            <label>
+                                <span class="required-label" data-key="membership_date">Date</span>
+                                <input type="date" name="applicant_signature_date" required>
+                            </label>
+                            <label class="guardian-signature-field" hidden>
+                                <span class="guardian-required-label" data-key="membership_guardian_signature">Parent/Guardian Signature (if under 18)</span>
+                                <input type="text" name="guardian_signature" data-guardian-required>
+                            </label>
+                            <label class="guardian-signature-field" hidden>
+                                <span class="guardian-required-label" data-key="membership_date">Date</span>
+                                <input type="date" name="guardian_signature_date" data-guardian-required>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-form membership-submit" data-key="membership_submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="seo.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LH93M6R3T5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH93M6R3T5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-LH93M6R3T5');
-</script>
+      gtag('config', 'G-LH93M6R3T5');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Judo Center New York offers professional judo training for kids, teens, and adults in Staten Island and Brooklyn.">
@@ -43,7 +43,7 @@
                 <button class="lang-node active" onclick="changeLang('en', this)">EN</button>
                 <button class="lang-node" onclick="changeLang('ru', this)">RU</button>
             </div>
-            <a href="#contact" class="btn-header-join" data-key="btn_join">Join Now</a>
+            <a href="/membership" class="btn-header-join" data-key="btn_join">Join Now</a>
         </div>
     </div>
 </header>
@@ -90,14 +90,14 @@
                     <h4 class="card-group" data-key="group_kids">Kids (5-7 years)</h4>
                     <p class="card-time" data-key="days_1">Mon • Wed • Fri</p>
                     <div style="font-weight: 900; font-size: 1.2rem; margin-bottom: 15px;">18:00 – 19:30</div>
-                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
+                    <a href="/membership" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
                 </div>
                 <div class="schedule-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-loc" data-key="loc_si">📍 Staten Island</div>
                     <h4 class="card-group" data-key="group_adults">Adults Group</h4>
                     <p class="card-time" data-key="days_1">Mon • Wed • Fri</p>
                     <div style="font-weight: 900; font-size: 1.2rem; margin-bottom: 15px;">19:30 – 21:00</div>
-                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
+                    <a href="/membership" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
                 </div>
                 <div class="schedule-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-loc" data-key="loc_br">📍 Brooklyn</div>
@@ -107,7 +107,7 @@
                         <span data-key="time_tue_thu">18:00 – 19:30 (Tue/Thu)</span><br>
                         <span data-key="time_sat">10:30 – 12:00 (Sat)</span>
                     </div>
-                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
+                    <a href="/membership" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
                 </div>
                 <div class="schedule-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="card-loc" data-key="loc_br">📍 Brooklyn</div>
@@ -117,7 +117,7 @@
                         <span data-key="time_tue_thu_adults">19:30 – 21:00 (Tue/Thu)</span><br>
                         <span data-key="time_sat_adults">12:00 – 13:30 (Sat)</span>
                     </div>
-                    <a href="#contact" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
+                    <a href="/membership" class="btn-card-sm" data-key="btn_signup">Sign Up</a>
                 </div>
             </div>
 
@@ -132,7 +132,7 @@
                         <div class="fit-time" data-key="days_fit">Tuesday • Thursday | 17:00 – 18:00</div>
                         <div class="fit-limit" data-key="fit_limit">12 classes per month</div>
                     </div>
-                    <a href="#contact" class="btn-gold-wide" data-key="btn_signup">Sign Up</a>
+                    <a href="/membership" class="btn-gold-wide" data-key="btn_signup">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -162,7 +162,7 @@
             <div class="contact-grid-new">
                 <div class="map-box" data-aos="fade-right">
                     <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d96856.3262662058!2d-74.120538!3d40.584347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s2565%20E%2017th%20St%2C%20Brooklyn%20and%20609%20Midland%20Ave%2C%20Staten%20Island!5e0!3m2!1suk!2sus" 
+        src="https://maps.google.com/maps?saddr=609%20Midland%20Ave%2C%20Staten%20Island%2C%20NY%2010306&daddr=2565%20E%2017th%20St%2C%20Brooklyn%2C%20NY%2011235&output=embed" 
         width="100%" 
         height="100%" 
         style="border:0;" 
@@ -176,13 +176,14 @@
                     <form class="nice-form" id="joinForm" action="https://formspree.io/f/xeejnnyd" method="POST">
                         <h3 data-key="btn_join">Join Now</h3>
                         <input type="text" name="name" data-key="form_name_placeholder" placeholder="Your Name" required>
-                        <input id="phone" type="text" data-key="form_phone_placeholder" placeholder="Phone Number">
+                        <input id="phone" type="tel" name="phone" data-key="form_phone_placeholder" placeholder="+1" data-phone-format>
                         <select name="gym" required>
                             <option value="" disabled selected data-key="form_select_gym">Select Gym</option>
-                            <option value="SI" data-key="loc_si">609 Midland Ave, Staten Island, NY10306</option>
-                            <option value="BR" data-key="loc_br">2565 E 17th St, Brooklyn, NY 11235</option>
+                            <option value="Staten Island - 609 Midland Ave, Staten Island, NY 10306">Staten Island - 609 Midland Ave, Staten Island, NY 10306</option>
+                            <option value="Brooklyn - 2565 E 17th St, Brooklyn, NY 11235">Brooklyn - 2565 E 17th St, Brooklyn, NY 11235</option>
                         </select>
-                        <button type="submit" class="btn-form" data-key="btn_signup">Sign Up</button>
+                        <a href="/membership" class="btn-form btn-form-link" data-key="membership_application_button">Membership Application</a>
+                        <button type="submit" class="btn-form btn-form-secondary" data-key="btn_signup">Quick Sign Up</button>
                         
                         <div class="social-icons-row">
                             <a href="https://instagram.com/judosambocenter" target="_blank" class="mini-icon insta"><i class="fab fa-instagram"></i></a>

@@ -1,6 +1,6 @@
 const translations = {
     uk: {
-        nav_home: "Головна", nav_about: "Про клуб", nav_schedule: "Розклад", nav_contact: "Контакти",
+        nav_home: "Головна", nav_about: "Про клуб", nav_schedule: "Розклад", nav_contact: "Контакти", contact_address_label: "Адреса",
         hero_title: "JUDO CENTER", btn_join: "Приєднатися",
         about_title: "Про наш Центр",
         about_p: "Центр дзюдо  був заснований у 1996 році. За останні 20 років наші учні брали участь у численних регіональних, національних та міжнародних змаганнях. Багато з них стали чемпіонами США та переможцями міжконтинентальних турнірів. Троє наших вихованців були відібрані до збірної США для участі в Панамериканських змаганнях. Сьогодні в клубі активно тренуються 150 учнів віком від 5 до 65 років. Групи та заняття розділені за віком. Головний тренер клубу — Фелікс Свердлін, має чорний пояс (5 дан) та кваліфікацію тренера міжнародного класу. Дзюдо — це олімпійський вид спортy. Але це не просто спорт, це стиль життя. Наші учні отримують не лише фізичну підготовку, а й інтенсивну психологічну підготовку. Наші вихованці та їхні батьки часто зустрічаються на вечірках, святкують дні народження та навіть разом їздять у відпустку. Вони стають частиною великої Дзюдо-родини!",
@@ -17,10 +17,50 @@ const translations = {
         athlete_cta_title: "Наші спортсмени", athlete_cta_text: "Познайомтеся з дзюдоїстами, які представляють нашу команду на татамі.", profile_more_athletes: "Інші спортсмени",
         profile_birth: "Дата народження:", profile_since: "У клубі з:", profile_experience: "Стаж дзюдо:", profile_belt: "Пояс:",
         profile_bio_title: "Біографія", profile_achievements_title: "Головні досягнення", follow_instagram: "Instagram профіль",
-        years_suffix: "+ років", started_in: "Почав у"
+        years_suffix: "+ років", started_in: "Почав у",
+        membership_kicker: "Judo & Wrestling Center",
+        membership_title: "Заявка на членство",
+        membership_intro: "Заповніть форму нижче, і наша команда зв'яжеться з вами для підтвердження наступного кроку.",
+        membership_applicant_info: "Інформація про заявника",
+        membership_age_question: "Вам є 18 років або більше?",
+        membership_yes: "Так",
+        membership_no: "Ні",
+        membership_full_name: "Повне ім'я",
+        membership_dob: "Дата народження",
+        membership_gender: "Стать",
+        membership_phone: "Телефон",
+        membership_address: "Адреса",
+        membership_email: "Email",
+        membership_guardian_info: "Інформація про батьків/опікуна",
+        membership_under_18: "(якщо заявнику менше 18 років)",
+        membership_guardian_name: "Ім'я батька/опікуна",
+        membership_emergency_contact: "Екстрений контакт",
+        membership_name: "Ім'я",
+        membership_relationship: "Ким доводиться",
+        membership_medical_info: "Медична інформація",
+        membership_medical_conditions: "Будь-які медичні стани або алергії",
+        membership_medications: "Поточні ліки",
+        membership_experience: "Досвід",
+        membership_trained_before: "Ви раніше тренувалися з дзюдо або боротьби?",
+        membership_experience_rank: "Якщо так, опишіть ваш досвід і ранг",
+        membership_membership: "Членство",
+        membership_program: "Програма",
+        membership_program_judo: "Дзюдо",
+        membership_program_wrestling: "Боротьба",
+        membership_program_both: "Обидва",
+        membership_training_days: "Бажані дні тренувань",
+        membership_agreement: "Угода",
+        membership_agreement_text: "Я розумію, що тренування з бойових мистецтв включають фізичну активність, і приймаю ризики, пов'язані з участю. Я погоджуюся дотримуватися всіх правил та інструкцій Judo & Wrestling Center.",
+        membership_agree_check: "Я прочитав/прочитала і погоджуюся з твердженням вище.",
+        membership_signatures: "Підписи",
+        membership_applicant_signature: "Підпис заявника",
+        membership_guardian_signature: "Підпис батька/опікуна (якщо менше 18 років)",
+        membership_date: "Дата",
+        membership_submit: "Надіслати заявку",
+        membership_application_button: "Повна заявка на членство"
     },
     en: {
-        nav_home: "Home", nav_about: "About", nav_schedule: "Schedule", nav_contact: "Contact",
+        nav_home: "Home", nav_about: "About", nav_schedule: "Schedule", nav_contact: "Contact", contact_address_label: "Address",
         hero_title: "JUDO CENTER", btn_join: "Join Now",
         about_title: "About Our Center",
         about_p: "Judo Center was founded in the year 1996. For the past 20 years, our students participated in many regional, national and international competitions. Many of them became champions of USA and winners of intercontinental tournaments. Three of our students were selected to be part of Team USA to compete at the Pan-American competition. The club has an active roster of 150 students, with ages ranging from 5 to 65 years old. The groups and classes are broken down by age. The head trainer of our club, Felix Sverdlin, has the “5 Dan Black Belt” and holds the professional qualification of an International Coach. Judo is an Olympic sport. But judo is not just simply a sport, its a lifestyle. Our students not only receive physical training but very intensive mental coaching. Our trainees and their parents often meet at various parties, celebrate birthdays together and even go on vacations with one another. They become parts of the Judo Family!",
@@ -37,10 +77,50 @@ const translations = {
         athlete_cta_title: "Our Athletes", athlete_cta_text: "Meet the judoka who represent our team on the mat.", profile_more_athletes: "Other Athletes",
         profile_birth: "Birth Date:", profile_since: "In Club Since:", profile_experience: "Judo Experience:", profile_belt: "Belt:",
         profile_bio_title: "Biography", profile_achievements_title: "Major Achievements", follow_instagram: "Follow on Instagram",
-        years_suffix: "+ years", started_in: "Started in"
+        years_suffix: "+ years", started_in: "Started in",
+        membership_kicker: "Judo & Wrestling Center",
+        membership_title: "Membership Application",
+        membership_intro: "Fill out the form below and our team will contact you to confirm the next step.",
+        membership_applicant_info: "Applicant Information",
+        membership_age_question: "Are you 18 or older?",
+        membership_yes: "Yes",
+        membership_no: "No",
+        membership_full_name: "Full Name",
+        membership_dob: "Date of Birth",
+        membership_gender: "Gender",
+        membership_phone: "Phone",
+        membership_address: "Address",
+        membership_email: "Email",
+        membership_guardian_info: "Parent/Guardian Information",
+        membership_under_18: "(if applicant is under 18)",
+        membership_guardian_name: "Parent/Guardian Name",
+        membership_emergency_contact: "Emergency Contact",
+        membership_name: "Name",
+        membership_relationship: "Relationship",
+        membership_medical_info: "Medical Information",
+        membership_medical_conditions: "Any medical conditions or allergies",
+        membership_medications: "Current medications",
+        membership_experience: "Experience",
+        membership_trained_before: "Have you trained in Judo or Wrestling before?",
+        membership_experience_rank: "If yes, describe your experience and rank",
+        membership_membership: "Membership",
+        membership_program: "Program",
+        membership_program_judo: "Judo",
+        membership_program_wrestling: "Wrestling",
+        membership_program_both: "Both",
+        membership_training_days: "Preferred Training Days",
+        membership_agreement: "Agreement",
+        membership_agreement_text: "I understand that martial arts training involves physical activity and accept the risks associated with participation. I agree to follow all rules and instructions of the Judo & Wrestling Center.",
+        membership_agree_check: "I have read and agree to the statement above.",
+        membership_signatures: "Signatures",
+        membership_applicant_signature: "Applicant Signature",
+        membership_guardian_signature: "Parent/Guardian Signature (if under 18)",
+        membership_date: "Date",
+        membership_submit: "Submit Application",
+        membership_application_button: "Membership Application"
     },
     ru: {
-        nav_home: "Главная", nav_about: "О клубе", nav_schedule: "Расписание", nav_contact: "Контакты",
+        nav_home: "Главная", nav_about: "О клубе", nav_schedule: "Расписание", nav_contact: "Контакты", contact_address_label: "Адрес",
         hero_title: "JUDO CENTER", btn_join: "Присоединиться",
         about_title: "О нашем Центре",
         about_p: "Центр дзюдо был основан в 1996 году. За последние 20 лет наши ученики участвовали во многих региональных, национальных и международных соревнованиях. Многие стали чемпионами США и победителями межконтинентальных турниров. Трое наших учеников вошли в состав сборной США для участия в Панамериканских соревнованиях. Сегодня в клубе тренируются 150 учеников в возрасте от 5 до 65 лет. Группы разделены по возрасту. Главный тренер клуба — Феликс Свердлин (черный пояс, 5 дан), тренер международного класса. Дзюдо — это олимпийский вид спорта. Но это не просто спорт, это образ жизни. Наши ученики получают не только физическую, но и интенсивную психологическую подготовку. Наши воспитанники и их родители часто встречаются на праздниках, отмечают дни рождения и даже вместе ездят в отпуск. Они становятся частью большой Дзюдо-семьи!",
@@ -57,7 +137,47 @@ const translations = {
         athlete_cta_title: "Наши спортсмены", athlete_cta_text: "Познакомьтесь с дзюдоистами, которые представляют нашу команду на татами.", profile_more_athletes: "Другие спортсмены",
         profile_birth: "Дата рождения:", profile_since: "В клубе с:", profile_experience: "Стаж дзюдо:", profile_belt: "Пояс:",
         profile_bio_title: "Биография", profile_achievements_title: "Главные достижения", follow_instagram: "Профиль Instagram",
-        years_suffix: "+ лет", started_in: "Начал в"
+        years_suffix: "+ лет", started_in: "Начал в",
+        membership_kicker: "Judo & Wrestling Center",
+        membership_title: "Заявление на членство",
+        membership_intro: "Заполните форму ниже, и наша команда свяжется с вами, чтобы подтвердить следующий шаг.",
+        membership_applicant_info: "Информация о заявителе",
+        membership_age_question: "Вам есть 18 лет или больше?",
+        membership_yes: "Да",
+        membership_no: "Нет",
+        membership_full_name: "Полное имя",
+        membership_dob: "Дата рождения",
+        membership_gender: "Пол",
+        membership_phone: "Телефон",
+        membership_address: "Адрес",
+        membership_email: "Email",
+        membership_guardian_info: "Информация о родителе/опекуне",
+        membership_under_18: "(если заявителю меньше 18 лет)",
+        membership_guardian_name: "Имя родителя/опекуна",
+        membership_emergency_contact: "Экстренный контакт",
+        membership_name: "Имя",
+        membership_relationship: "Кем приходится",
+        membership_medical_info: "Медицинская информация",
+        membership_medical_conditions: "Медицинские состояния или аллергии",
+        membership_medications: "Текущие лекарства",
+        membership_experience: "Опыт",
+        membership_trained_before: "Вы раньше тренировались по дзюдо или борьбе?",
+        membership_experience_rank: "Если да, опишите ваш опыт и ранг",
+        membership_membership: "Членство",
+        membership_program: "Программа",
+        membership_program_judo: "Дзюдо",
+        membership_program_wrestling: "Борьба",
+        membership_program_both: "Оба",
+        membership_training_days: "Предпочтительные дни тренировок",
+        membership_agreement: "Соглашение",
+        membership_agreement_text: "Я понимаю, что тренировки по боевым искусствам включают физическую активность, и принимаю риски, связанные с участием. Я согласен/согласна соблюдать все правила и инструкции Judo & Wrestling Center.",
+        membership_agree_check: "Я прочитал/прочитала и соглашаюсь с утверждением выше.",
+        membership_signatures: "Подписи",
+        membership_applicant_signature: "Подпись заявителя",
+        membership_guardian_signature: "Подпись родителя/опекуна (если меньше 18 лет)",
+        membership_date: "Дата",
+        membership_submit: "Отправить заявку",
+        membership_application_button: "Полная заявка на членство"
     }
 };
 
@@ -93,6 +213,105 @@ function changeLang(lang, btnElement) {
     if (document.getElementById("profileContainer")) loadProfilePage();
 }
 
+function updateGuardianVisibility() {
+    const selectedAge = document.querySelector('input[name="is_18_or_older"]:checked');
+    const showGuardian = selectedAge && selectedAge.value === "No";
+    const guardianSection = document.getElementById("guardianSection");
+    const guardianSignatureFields = document.querySelectorAll(".guardian-signature-field");
+    const guardianInputs = document.querySelectorAll("[data-guardian-required]");
+
+    if (!guardianSection) return;
+
+    guardianSection.hidden = !showGuardian;
+    guardianSignatureFields.forEach(field => {
+        field.hidden = !showGuardian;
+    });
+
+    guardianInputs.forEach(input => {
+        input.required = !!showGuardian;
+        input.disabled = !showGuardian;
+        if (!showGuardian) input.value = "";
+    });
+}
+
+function updateExperienceVisibility() {
+    const selectedExperience = document.querySelector('input[name="trained_before"]:checked');
+    const showExperience = selectedExperience && selectedExperience.value === "Yes";
+    const field = document.getElementById("experienceRankField");
+
+    if (!field) return;
+
+    const textarea = field.querySelector("textarea");
+    field.hidden = !showExperience;
+
+    if (textarea) {
+        textarea.disabled = !showExperience;
+        textarea.required = !!showExperience;
+        if (!showExperience) textarea.value = "";
+    }
+}
+
+function formatUsPhone(rawValue) {
+    let digits = rawValue.replace(/\D/g, "");
+
+    if (digits.startsWith("1")) {
+        digits = digits.slice(1);
+    }
+
+    digits = digits.slice(0, 10);
+
+    if (digits.length === 0) return "+1 ";
+    if (digits.length <= 3) return `+1 (${digits}`;
+    if (digits.length <= 6) return `+1 (${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `+1 (${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
+function normalizePhoneInput(input) {
+    input.value = formatUsPhone(input.value);
+}
+
+function initPhoneFormatters() {
+    document.querySelectorAll("[data-phone-format]").forEach(input => {
+        normalizePhoneInput(input);
+
+        input.addEventListener("focus", () => {
+            normalizePhoneInput(input);
+            input.setSelectionRange(input.value.length, input.value.length);
+        });
+
+        input.addEventListener("input", () => {
+            normalizePhoneInput(input);
+            input.setSelectionRange(input.value.length, input.value.length);
+        });
+
+        input.addEventListener("keydown", event => {
+            const protectedPrefixLength = 3;
+            const startsInsidePrefix = input.selectionStart <= protectedPrefixLength;
+            const noSelection = input.selectionStart === input.selectionEnd;
+
+            if ((event.key === "Backspace" || event.key === "Delete") && startsInsidePrefix && noSelection) {
+                event.preventDefault();
+                normalizePhoneInput(input);
+                input.setSelectionRange(input.value.length, input.value.length);
+            }
+        });
+    });
+}
+
+function initMembershipForm() {
+    if (!document.getElementById("membershipForm")) return;
+
+    document.querySelectorAll('input[name="is_18_or_older"]').forEach(input => {
+        input.addEventListener("change", updateGuardianVisibility);
+    });
+    document.querySelectorAll('input[name="trained_before"]').forEach(input => {
+        input.addEventListener("change", updateExperienceVisibility);
+    });
+
+    updateGuardianVisibility();
+    updateExperienceVisibility();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof AOS !== "undefined") {
         AOS.init({ duration: 1000, once: true });
@@ -101,6 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langButtonText = savedLang === 'uk' ? 'ua' : savedLang.toLowerCase();
     const btn = Array.from(document.querySelectorAll('.lang-node')).find(b => b.innerText.toLowerCase() === langButtonText);
     changeLang(savedLang, btn);
+    initPhoneFormatters();
+    initMembershipForm();
 });
 if (typeof targetElement !== "undefined" && targetElement) {
     window.scrollTo({
@@ -132,28 +353,6 @@ if (typeof Swiper !== "undefined" && document.querySelector(".mySwiper")) {
       },
     });
 }
-document.addEventListener("DOMContentLoaded", function () {
-
-  const phone = document.getElementById("phone");
-
-  if (!phone) return;
-
-  // only add +1 if user hasn't typed anything yet
-  phone.addEventListener("focus", function () {
-    if (phone.value.trim() === "") {
-      phone.value = "+1 ";
-    }
-  });
-
-  // Optional: if translation changes dynamically, ensure +1 is not removed
-  const observer = new MutationObserver(() => {
-    if (phone === document.activeElement && phone.value === "") {
-      phone.value = "+1 ";
-    }
-  });
-
-  observer.observe(phone, { attributes: true, attributeFilter: ['placeholder'] });
-});
 // Додай більше інфо до кожного атлета (Біографія, Instagram тощо)
 const athletes = {
     dmytrii_malishevskyi: {
