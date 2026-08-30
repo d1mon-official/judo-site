@@ -619,6 +619,20 @@ body {
     height: 500px; 
     border-radius: 20px; 
     overflow: hidden; 
+    background: #eef2f7;
+}
+
+.map-box iframe {
+    display: block;
+}
+
+.map-placeholder {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 900;
 }
 
 .info-side {

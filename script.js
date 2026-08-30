@@ -312,6 +312,34 @@ function initMembershipForm() {
     updateExperienceVisibility();
 }
 
+function initGymMap() {
+    const gymSelect = document.getElementById("gymSelect");
+    const gymMap = document.getElementById("gymMap");
+    const gymMapPlaceholder = document.getElementById("gymMapPlaceholder");
+
+    if (!gymSelect || !gymMap || !gymMapPlaceholder) return;
+
+    const gymLocations = {
+        "staten-island": "https://www.google.com/maps?q=609+Midland+Ave,+Staten+Island,+NY+10306&output=embed",
+        brooklyn: "https://www.google.com/maps?q=2565+E+17th+St,+Brooklyn,+NY+11235&output=embed"
+    };
+
+    const updateGymMap = () => {
+        const mapUrl = gymLocations[gymSelect.value];
+        const hasSelectedGym = Boolean(mapUrl);
+
+        gymMap.hidden = !hasSelectedGym;
+        gymMapPlaceholder.hidden = hasSelectedGym;
+
+        if (hasSelectedGym && gymMap.src !== mapUrl) {
+            gymMap.src = mapUrl;
+        }
+    };
+
+    gymSelect.addEventListener("change", updateGymMap);
+    updateGymMap();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof AOS !== "undefined") {
         AOS.init({ duration: 1000, once: true });
@@ -322,6 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
     changeLang(savedLang, btn);
     initPhoneFormatters();
     initMembershipForm();
+    initGymMap();
 });
 if (typeof targetElement !== "undefined" && targetElement) {
     window.scrollTo({
