@@ -12,7 +12,7 @@ const translations = {
         fit_exp: "Експериментальна група • 📍 Brooklyn", fit_limit: "12 занять на місяць", 
         btn_signup: "Записатися", follow_us: "Слідкуйте за нами у соцмережах:",
         see_more: "Хочете побачити більше фото та відео?", gallery_title: "Наше життя в залі",
-        form_select_gym: "Виберіть зал", form_name_placeholder: "Ваше ім'я", form_phone_placeholder: "Номер телефону",
+        form_select_gym: "Виберіть зал", map_loading: "Завантаження карти…", form_name_placeholder: "Ваше ім'я", form_phone_placeholder: "Номер телефону",
         athletes_title: "Наша команда", view_profile: "Профіль", since_label: "З", back_to_team: "Назад до команди", btn_athletes: "Дивитися атлетів",
         athlete_cta_title: "Наші спортсмени", athlete_cta_text: "Познайомтеся з дзюдоїстами, які представляють нашу команду на татамі.", profile_more_athletes: "Інші спортсмени",
         profile_birth: "Дата народження:", profile_since: "У клубі з:", profile_experience: "Стаж дзюдо:", profile_belt: "Пояс:",
@@ -72,7 +72,7 @@ const translations = {
         fit_exp: "Experimental group • 📍 Brooklyn", fit_limit: "12 classes per month", 
         btn_signup: "Sign Up", follow_us: "Follow us on social media:",
         see_more: "Want to see more photos and videos?", gallery_title: "Our Life in the Gym",
-        form_select_gym: "Select Gym", form_name_placeholder: "Your Name", form_phone_placeholder: "Phone Number",
+        form_select_gym: "Select Gym", map_loading: "Loading map…", form_name_placeholder: "Your Name", form_phone_placeholder: "Phone Number",
         athletes_title: "Our Team", view_profile: "View Profile", since_label: "Since", back_to_team: "Back to Team", btn_athletes: "View Athletes",
         athlete_cta_title: "Our Athletes", athlete_cta_text: "Meet the judoka who represent our team on the mat.", profile_more_athletes: "Other Athletes",
         profile_birth: "Birth Date:", profile_since: "In Club Since:", profile_experience: "Judo Experience:", profile_belt: "Belt:",
@@ -132,7 +132,7 @@ const translations = {
         fit_exp: "Экспериментальная группа • 📍 Бруклин", fit_limit: "12 занятий в месяц", 
         btn_signup: "Записаться", follow_us: "Следите за нами в соцсетях:",
         see_more: "Хотите увидеть больше фото и видео?", gallery_title: "Наша жизнь в зале",
-        form_select_gym: "Выберите зал", form_name_placeholder: "Ваше имя", form_phone_placeholder: "Номер телефона",
+        form_select_gym: "Выберите зал", map_loading: "Загрузка карты…", form_name_placeholder: "Ваше имя", form_phone_placeholder: "Номер телефона",
         athletes_title: "Наша команда", view_profile: "Профиль", since_label: "С", back_to_team: "Назад к команде", btn_athletes: "Смотреть атлетов",
         athlete_cta_title: "Наши спортсмены", athlete_cta_text: "Познакомьтесь с дзюдоистами, которые представляют нашу команду на татами.", profile_more_athletes: "Другие спортсмены",
         profile_birth: "Дата рождения:", profile_since: "В клубе с:", profile_experience: "Стаж дзюдо:", profile_belt: "Пояс:",
@@ -312,32 +312,54 @@ function initMembershipForm() {
     updateExperienceVisibility();
 }
 
+const gymLocations = {
+    "staten-island": "https://www.google.com/maps?q=609+Midland+Ave,+Staten+Island,+NY+10306&output=embed",
+    brooklyn: "https://www.google.com/maps?q=2565+E+17th+St,+Brooklyn,+NY+11235&output=embed"
+};
+
+function updateGymMap(gymId) {
+    const mapContainer = document.getElementById("gymMapContainer");
+    if (!mapContainer) return;
+
+    const mapUrl = gymLocations[gymId];
+
+    if (!mapUrl) {
+        const placeholder = document.createElement("div");
+        placeholder.className = "map-placeholder";
+        placeholder.textContent = getTranslation("form_select_gym");
+        mapContainer.replaceChildren(placeholder);
+        mapContainer.setAttribute("aria-busy", "false");
+        return;
+    }
+
+    const map = document.createElement("iframe");
+    map.className = "gym-map-frame";
+    map.title = gymId === "staten-island" ? "Staten Island gym location" : "Brooklyn gym location";
+    map.src = mapUrl;
+    map.allowFullscreen = true;
+    map.loading = "eager";
+    map.referrerPolicy = "no-referrer-when-downgrade";
+
+    const loader = document.createElement("div");
+    loader.className = "map-loader";
+    loader.setAttribute("role", "status");
+    loader.innerHTML = '<span class="map-loader-spinner" aria-hidden="true"></span><span>' + getTranslation("map_loading") + "</span>";
+
+    map.addEventListener("load", () => {
+        loader.remove();
+        mapContainer.setAttribute("aria-busy", "false");
+    }, { once: true });
+
+    mapContainer.replaceChildren(map, loader);
+    mapContainer.setAttribute("aria-busy", "true");
+}
+
 function initGymMap() {
     const gymSelect = document.getElementById("gymSelect");
-    const gymMap = document.getElementById("gymMap");
-    const gymMapPlaceholder = document.getElementById("gymMapPlaceholder");
+    if (!gymSelect) return;
 
-    if (!gymSelect || !gymMap || !gymMapPlaceholder) return;
-
-    const gymLocations = {
-        "staten-island": "https://www.google.com/maps?q=609+Midland+Ave,+Staten+Island,+NY+10306&output=embed",
-        brooklyn: "https://www.google.com/maps?q=2565+E+17th+St,+Brooklyn,+NY+11235&output=embed"
-    };
-
-    const updateGymMap = () => {
-        const mapUrl = gymLocations[gymSelect.value];
-        const hasSelectedGym = Boolean(mapUrl);
-
-        gymMap.hidden = !hasSelectedGym;
-        gymMapPlaceholder.hidden = hasSelectedGym;
-
-        if (hasSelectedGym && gymMap.src !== mapUrl) {
-            gymMap.src = mapUrl;
-        }
-    };
-
-    gymSelect.addEventListener("change", updateGymMap);
-    updateGymMap();
+    gymSelect.addEventListener("change", event => updateGymMap(event.target.value));
+    updateGymMap(gymSelect.value);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

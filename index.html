@@ -160,19 +160,8 @@
         <div class="container">
             <h2 class="section-title center-align" data-key="nav_contact">Contact</h2>
             <div class="contact-grid-new">
-                <div class="map-box" data-aos="fade-right">
-                    <div class="map-placeholder" id="gymMapPlaceholder" data-key="form_select_gym">Select Gym</div>
-                    <iframe
-                        id="gymMap"
-                        title="Selected gym location"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        hidden>
-                    </iframe>
+                <div class="map-box" id="gymMapContainer" data-aos="fade-right" aria-live="polite" aria-busy="false">
+                    <div class="map-placeholder" data-key="form_select_gym">Select Gym</div>
                 </div>
 
                 <div class="info-side" data-aos="fade-left">
@@ -180,7 +169,7 @@
                         <h3 data-key="btn_join">Join Now</h3>
                         <input type="text" name="name" data-key="form_name_placeholder" placeholder="Your Name" required>
                         <input id="phone" type="tel" name="phone" data-key="form_phone_placeholder" placeholder="+1" data-phone-format>
-                        <select name="gym" id="gymSelect" required>
+                        <select name="gym" id="gymSelect" onchange="updateGymMap(this.value)" required>
                             <option value="" disabled selected data-key="form_select_gym">Select Gym</option>
                             <option value="staten-island">Staten Island</option>
                             <option value="brooklyn">Brooklyn</option>
