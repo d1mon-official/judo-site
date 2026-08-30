@@ -622,7 +622,11 @@ body {
     background: #eef2f7;
 }
 
-.map-box iframe {
+.map-box iframe[hidden] {
+    display: none;
+}
+
+.map-box iframe:not([hidden]) {
     display: block;
 }
 
